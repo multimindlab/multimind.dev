@@ -1,0 +1,67 @@
+---
+const { title, description } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title}</title>
+<meta name="description" content={description}>
+<link rel="icon" href="/assets/logo.png">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<div class="bg-blobs" aria-hidden="true">
+  <span class="blob blob-1"></span>
+  <span class="blob blob-2"></span>
+  <span class="blob blob-3"></span>
+</div>
+
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="brand" href="/">
+      <img src="/assets/logo.png" alt="MultiMind SDK" class="brand-logo">
+    </a>
+    <nav class="nav-links">
+      <a href="/#why">Why</a>
+      <a href="/#features">Features</a>
+      <a href="/#compliance">Compliance</a>
+      <a href="/#use-cases">Use Cases</a>
+      <a href="/#roadmap">Roadmap</a>
+      <a href="/#case-study">Case Study</a>
+      <a href="/#quickstart">Quickstart</a>
+      <a href="/blog">Blog</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="https://github.com/multimindlab/multimind-sdk" target="_blank" rel="noopener" id="star-btn">
+        <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"></path></svg>
+        <span>Star</span>
+      </a>
+      <a class="btn btn-primary" href="/#quickstart">Get Started</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <slot />
+</main>
+
+<footer class="footer" id="community">
+  <div class="footer-inner">
+    <img src="/assets/logo.png" alt="MultiMind SDK" class="footer-logo">
+    <div class="footer-links">
+      <a href="https://github.com/multimindlab/multimind-sdk" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://discord.gg/K64U65je7h" target="_blank" rel="noopener">Discord</a>
+      <a href="https://x.com/multimindsdk" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://opencollective.com/multimind-sdk" target="_blank" rel="noopener">Support</a>
+      <a href="mailto:info@ai2innovate.io">info@ai2innovate.io</a>
+    </div>
+    <p class="footer-meta">Apache 2.0 License. Built by AI2Innovate.</p>
+  </div>
+</footer>
+
+<script src="/script.js" is:inline></script>
+</body>
+</html>
