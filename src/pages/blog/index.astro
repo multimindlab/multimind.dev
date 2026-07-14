@@ -2,28 +2,68 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
-const posts = (await getCollection("blog")).sort(
+const allPosts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
+const businessPosts = allPosts.filter((p) => p.data.tags?.includes("business"));
+const techPosts = allPosts.filter((p) => p.data.tags?.includes("tech"));
+const taggedSlugs = new Set([...businessPosts, ...techPosts].map((p) => p.slug));
+const otherPosts = allPosts.filter((p) => !taggedSlugs.has(p.slug));
 ---
 <BaseLayout
   title="Blog — MultiMind SDK"
-  description="AI adoption, MultiMind SDK internals, and running MultiMind across AWS, Azure, and GCP."
+  description="AI adoption, MultiMind SDK internals, business use cases, and hands-on technical guides for running compliant AI in production."
 >
   <section class="section">
     <div class="section-inner">
       <h1 class="reveal">Blog</h1>
-      <p class="section-lede reveal">AI adoption, MultiMind SDK internals, and cloud deployment notes.</p>
+      <p class="section-lede reveal">Business cases for AI governance and hands-on technical guides for building with MultiMind SDK.</p>
 
-      <div class="grid grid-3" style="margin-top: 2rem;">
-        {posts.map((post) => (
-          <a class="card reveal" href={`/blog/${post.slug}`} style="text-decoration: none; color: inherit;">
-            <h3>{post.data.title}</h3>
-            <p>{post.data.description}</p>
-            <p class="disclaimer">{post.data.pubDate.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</p>
-          </a>
-        ))}
-      </div>
+      {otherPosts.length > 0 && (
+        <>
+          <h2 class="reveal" style="font-size: 1.3rem; margin: 0 0 20px;">Latest</h2>
+          <div class="grid grid-3" style="margin-bottom: 3rem;">
+            {otherPosts.map((post) => (
+              <a class="card reveal" href={`/blog/${post.slug}`} style="text-decoration: none; color: inherit;">
+                <h3>{post.data.title}</h3>
+                <p>{post.data.description}</p>
+                <p class="disclaimer">{post.data.pubDate.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</p>
+              </a>
+            ))}
+          </div>
+        </>
+      )}
+
+      {businessPosts.length > 0 && (
+        <>
+          <h2 class="reveal" style="font-size: 1.3rem; margin: 0 0 20px;">For business & platform teams</h2>
+          <div class="grid grid-3" style="margin-bottom: 3rem;">
+            {businessPosts.map((post) => (
+              <a class="card reveal" href={`/blog/${post.slug}`} style="text-decoration: none; color: inherit;">
+                <h3>{post.data.title}</h3>
+                <p>{post.data.description}</p>
+                <p class="disclaimer">{post.data.pubDate.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</p>
+              </a>
+            ))}
+          </div>
+        </>
+      )}
+
+      {techPosts.length > 0 && (
+        <>
+          <h2 class="reveal" style="font-size: 1.3rem; margin: 0 0 20px;">For developers</h2>
+          <div class="grid grid-3">
+            {techPosts.map((post) => (
+              <a class="card reveal" href={`/blog/${post.slug}`} style="text-decoration: none; color: inherit;">
+                <h3>{post.data.title}</h3>
+                <p>{post.data.description}</p>
+                <p class="disclaimer">{post.data.pubDate.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</p>
+              </a>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   </section>
 </BaseLayout>

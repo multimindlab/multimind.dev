@@ -1,0 +1,34 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Home from "../../components/Home.astro";
+import t from "../../i18n/nl";
+import featuresByLocale from "../../data/features";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "MultiMind SDK",
+  applicationCategory: "DeveloperApplication",
+  operatingSystem: "Cross-platform",
+  description: "Het compliance-first AI-agentframework — één API voor elk LLM, met ingebouwde AVG-, HIPAA- en AI Act-bewijsrapportage.",
+  url: "https://multimind.dev/nl/",
+  softwareVersion: "latest",
+  license: "https://github.com/multimindlab/multimind-sdk/blob/develop/LICENSE",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  author: { "@type": "Organization", name: "AI2Innovate", url: "https://ai2innovate.io" },
+  codeRepository: "https://github.com/multimindlab/multimind-sdk",
+  programmingLanguage: "Python",
+  inLanguage: "nl",
+};
+---
+<BaseLayout
+  title="MultiMind SDK — Het compliance-first AI-agentframework"
+  description="Eén API voor elk LLM, met ingebouwde AVG-, HIPAA- en AI Act-ondersteuning. Beheer de AI-stack die je al hebt — LangChain, LlamaIndex, CrewAI — door één regel te wijzigen."
+  lang="nl"
+  nav={t.nav}
+  footer={t.footer}
+  translated={true}
+  jsonLd={jsonLd}
+>
+  <Home t={t} features={featuresByLocale.nl} />
+</BaseLayout>

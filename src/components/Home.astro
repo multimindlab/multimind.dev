@@ -1,0 +1,353 @@
+---
+const { t, features } = Astro.props;
+---
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner reveal">
+      <img src="/assets/logo.png" alt="MultiMind SDK logo" class="hero-logo">
+      <h1>{t.hero.titleLine1}<br><span class="grad-text">{t.hero.titleLine2}</span></h1>
+      <p class="hero-sub" set:html={t.hero.sub}></p>
+
+      <div class="hero-cta">
+        <button class="btn btn-primary btn-lg" id="copy-install">
+          <code>pip install multimind-sdk</code>
+          <span class="copy-hint">copy</span>
+        </button>
+        <a class="btn btn-outline btn-lg" href="https://github.com/multimindlab/multimind-sdk" target="_blank" rel="noopener">{t.nav.viewOnGithub}</a>
+      </div>
+
+      <div class="hero-code" aria-hidden="true">
+        <div class="code-window">
+          <div class="code-dots"><span></span><span></span><span></span></div>
+          <pre><code id="typewriter"></code><span class="caret">&nbsp;</span></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="why" class="section">
+    <div class="section-inner">
+      <h2 class="reveal">{t.why.heading1}<br><span class="grad-text">{t.why.heading2}</span></h2>
+      <div class="grid grid-3">
+        {t.why.cards.map((card) => (
+          <div class="card reveal">
+            <div class="card-icon">{card.icon}</div>
+            <h3>{card.title}</h3>
+            <p set:html={card.desc}></p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="section section-alt">
+    <div class="section-inner">
+      <h2 class="reveal">{t.features.heading}</h2>
+      <p class="section-lede reveal">
+        {t.features.ledePre}<a href="https://github.com/multimindlab/multimind-sdk/blob/develop/FEATURES.md" target="_blank" rel="noopener">{t.features.ledeLinkText}</a>{t.features.ledePost}
+      </p>
+
+      <div class="grid grid-4 features-grid" id="features-grid">
+        {features.map((f) => (
+          <div class="feature-card reveal">
+            <span class={`badge ${f.status === "stable" ? "badge-stable" : "badge-beta"}`}>{f.status}</span>
+            <h4>{f.name}</h4>
+            <p>{f.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPLIANCE / EU AI ACT -->
+  <section id="compliance" class="section">
+    <div class="section-inner">
+      <div class="compliance-layout">
+        <div class="reveal">
+          <h2>{t.compliance.heading}</h2>
+          <p set:html={t.compliance.paragraph}></p>
+          <ul class="compliance-list">
+            {t.compliance.items.map((item) => (
+              <li><strong>{item.label}</strong> — {item.desc}</li>
+            ))}
+          </ul>
+          <p class="disclaimer" set:html={t.compliance.disclaimer}></p>
+        </div>
+        <div class="reveal code-card">
+          <div class="code-window">
+            <div class="code-dots"><span></span><span></span><span></span></div>
+            <pre><code>multimind compliance report-evidence \
+  --audit-log audit.jsonl \
+  --costs-log costs.jsonl \
+  --project . \
+  --period 2026-07 \
+  --format html -o evidence.html</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USE CASES -->
+  <section id="use-cases" class="section section-alt">
+    <div class="section-inner">
+      <h2 class="reveal">{t.useCases.heading}</h2>
+      <div class="grid grid-4">
+        {t.useCases.cards.map((card) => (
+          <div class="card reveal">
+            <div class="card-icon">{card.icon}</div>
+            <h3>{card.title}</h3>
+            <p set:html={card.desc}></p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP / COMING SOON -->
+  <section id="roadmap" class="section">
+    <div class="section-inner">
+      <h2 class="reveal">{t.roadmap.heading}</h2>
+      <p class="section-lede reveal" set:html={t.roadmap.lede}></p>
+
+      <div class="roadmap-layout">
+        <div class="dashboard-mock reveal" aria-hidden="true">
+          <span class="mock-ribbon">{t.roadmap.dashboard.preview}</span>
+          <div class="mock-sidebar">
+            <div class="mock-brand" set:html={t.roadmap.dashboard.brand}></div>
+            <div class="mock-nav-item active">{t.roadmap.dashboard.overview}</div>
+            <div class="mock-nav-item">{t.roadmap.dashboard.audit}</div>
+            <div class="mock-nav-item">{t.roadmap.dashboard.costs}</div>
+            <div class="mock-nav-item">{t.roadmap.dashboard.inventory}</div>
+            <div class="mock-nav-item">{t.roadmap.dashboard.guardrails}</div>
+            <div class="mock-nav-item mock-soon">{t.roadmap.dashboard.training} <span class="mock-soon-tag">{t.roadmap.dashboard.soon}</span></div>
+          </div>
+          <div class="mock-main">
+            <div class="mock-tiles">
+              <div class="mock-tile"><span>{t.roadmap.dashboard.piiDetections}</span><strong>42</strong></div>
+              <div class="mock-tile"><span>{t.roadmap.dashboard.blocked}</span><strong>9</strong></div>
+              <div class="mock-tile"><span>{t.roadmap.dashboard.totalSpend}</span><strong>$18.40</strong></div>
+              <div class="mock-tile"><span>{t.roadmap.dashboard.models}</span><strong>4</strong></div>
+            </div>
+            <div class="mock-charts">
+              <div class="mock-chart-card">
+                <span class="mock-chart-title">{t.roadmap.dashboard.spendChart}</span>
+                <div class="mock-line-chart"><svg viewBox="0 0 200 60" preserveAspectRatio="none"><polyline points="0,50 25,42 50,45 75,28 100,33 125,18 150,22 175,10 200,14" fill="none" stroke="url(#lg)" stroke-width="2"/><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7c5cfc"/><stop offset="1" stop-color="#4e7fef"/></linearGradient></defs></svg></div>
+              </div>
+              <div class="mock-chart-card">
+                <span class="mock-chart-title">{t.roadmap.dashboard.piiByType}</span>
+                <div class="mock-bars">
+                  <div class="mock-bar-row"><span>email</span><i style="width:82%"></i></div>
+                  <div class="mock-bar-row"><span>ssn</span><i style="width:38%"></i></div>
+                  <div class="mock-bar-row"><span>api_key</span><i style="width:20%"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="roadmap-list reveal">
+          <p class="case-label">{t.roadmap.plannedLabel}</p>
+          <ul>
+            {t.roadmap.items.map((item) => (
+              <li><strong>{item.title}</strong> — <span set:html={item.desc}></span></li>
+            ))}
+          </ul>
+          <p class="disclaimer">
+            {t.roadmap.disclaimerPre}<a href="https://github.com/multimindlab/multimind-sdk/blob/develop/ROADMAP.md" target="_blank" rel="noopener">{t.roadmap.disclaimerLinkText}</a>{t.roadmap.disclaimerPost}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDY -->
+  <section id="case-study" class="section">
+    <div class="section-inner">
+      <h2 class="reveal">{t.caseStudy.heading}</h2>
+      <p class="section-lede reveal">{t.caseStudy.lede}</p>
+
+      <h3 class="case-subhead reveal">{t.caseStudy.dev.subhead}</h3>
+      <p class="section-lede reveal" set:html={t.caseStudy.dev.para}></p>
+
+      <div class="case-study-grid">
+        <div class="reveal">
+          <p class="case-label">{t.caseStudy.dev.step1Label}</p>
+          <div class="code-window">
+            <div class="code-dots"><span></span><span></span><span></span></div>
+            <pre><code>multimind serve --port 8400 --upstream openai \
+  --block-on ssn,credit_card \
+  --budget 25.00 \
+  --audit-log audit.jsonl</code></pre>
+          </div>
+        </div>
+        <div class="reveal">
+          <p class="case-label">{t.caseStudy.dev.step2Label}</p>
+          <div class="code-window">
+            <div class="code-dots"><span></span><span></span><span></span></div>
+            <pre><code>from openai import OpenAI
+
+# The ONLY change: base_url.
+# Every call now gets PII redaction,
+# budgets, and an audit trail.
+client = OpenAI(
+    base_url="http://localhost:8400/v1",
+    api_key="unused-upstream-key-is-server-side",
+)
+client.chat.completions.create(
+    model="gpt-4o-mini",
+    messages=[&#123;"role": "user", "content": "..."&#125;],
+)</code></pre>
+          </div>
+        </div>
+      </div>
+      <p class="case-result reveal" set:html={t.caseStudy.dev.result}></p>
+
+      <h3 class="case-subhead reveal">{t.caseStudy.nonTech.subhead}</h3>
+      <p class="section-lede reveal">
+        <Fragment set:html={t.caseStudy.nonTech.paraPre} /><a href="https://github.com/multimindlab/multimind-sdk/blob/develop/docs/getting-started-non-technical.md" target="_blank" rel="noopener">{t.caseStudy.nonTech.paraLinkText}</a>{t.caseStudy.nonTech.paraPost}
+      </p>
+
+      <div class="case-study-grid">
+        <div class="reveal">
+          <p class="case-label">{t.caseStudy.nonTech.step1Label}</p>
+          <div class="code-window">
+            <div class="code-dots"><span></span><span></span><span></span></div>
+            <pre><code>multimind compliance scan-text \
+  "Contact Jane at jane.doe@corp.com or 555-123-4567"</code></pre>
+          </div>
+        </div>
+        <div class="reveal">
+          <p class="case-label">{t.caseStudy.nonTech.step2Label}</p>
+          <div class="code-window">
+            <div class="code-dots"><span></span><span></span><span></span></div>
+            <pre><code>                PII Findings (2)
+┏━━━━━━━┳━━━━━━━┳━━━━━┳━━━━━━━━━━━━━━━━━━━┓
+┃ Type  ┃ Start ┃ End ┃ Match             ┃
+┡━━━━━━━╇━━━━━━━╇━━━━━╇━━━━━━━━━━━━━━━━━━━┩
+│ email │    16 │  34 │ jane.doe@corp.com │
+│ phone │    38 │  50 │ 555-123-4567      │
+└───────┴───────┴─────┴───────────────────┘</code></pre>
+          </div>
+        </div>
+      </div>
+      <p class="case-result reveal" set:html={t.caseStudy.nonTech.result}></p>
+    </div>
+  </section>
+
+  <!-- QUICKSTART -->
+  <section id="quickstart" class="section section-alt">
+    <div class="section-inner">
+      <h2 class="reveal">{t.quickstart.heading}</h2>
+      <p class="section-lede reveal">{t.quickstart.lede}</p>
+
+      <div class="tabs reveal">
+        <div class="tab-bar" role="tablist">
+          <button class="tab-btn active" data-tab="install">{t.quickstart.tabs.install}</button>
+          <button class="tab-btn" data-tab="chat">{t.quickstart.tabs.chat}</button>
+          <button class="tab-btn" data-tab="guard">{t.quickstart.tabs.guard}</button>
+          <button class="tab-btn" data-tab="rag">{t.quickstart.tabs.rag}</button>
+          <button class="tab-btn" data-tab="agent">{t.quickstart.tabs.agent}</button>
+        </div>
+
+        <div class="tab-panels">
+          <div class="tab-panel active" data-panel="install">
+            <div class="code-window">
+              <div class="code-dots"><span></span><span></span><span></span></div>
+              <pre><code>pip install multimind-sdk                # Core
+pip install multimind-sdk[rag]           # + RAG & vector stores
+pip install multimind-sdk[agents]        # + Agent framework with memory
+pip install multimind-sdk[compliance]    # + GDPR/HIPAA/NIS2 compliance
+pip install multimind-sdk[gateway]       # + FastAPI gateway server
+pip install multimind-sdk[all]           # Everything</code></pre>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-panel="chat">
+            <div class="code-window">
+              <div class="code-dots"><span></span><span></span><span></span></div>
+              <pre><code>from multimind import OpenAIModel, ClaudeModel, GeminiModel
+
+gpt = OpenAIModel(model_name="gpt-4o-mini")
+claude = ClaudeModel(model_name="claude-3-5-sonnet-20241022")
+gemini = GeminiModel(model_name="gemini-2.0-flash")
+
+# Same interface, different providers
+response = await gpt.generate("Hello!")
+response = await claude.generate("Hello!")
+response = await gemini.generate("Hello!")</code></pre>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-panel="guard">
+            <div class="code-window">
+              <div class="code-dots"><span></span><span></span><span></span></div>
+              <pre><code>from multimind import OpenAIModel
+from multimind.compliance import guard
+
+model = guard(
+    OpenAIModel(model_name="gpt-4o-mini"),
+    strategy="mask",                    # emails become [EMAIL], SSNs [SSN]
+    block_on=("credit_card", "ssn"),
+    audit_log="compliance_audit.jsonl",
+)
+
+response = await model.generate("Email jane.doe@corp.com about the invoice")
+# The provider only ever saw: "Email [EMAIL] about the invoice"</code></pre>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-panel="rag">
+            <div class="code-window">
+              <div class="code-dots"><span></span><span></span><span></span></div>
+              <pre><code>from multimind.rag.fluent import RAGPipeline, RAGConfig
+from multimind.vector_store.base import VectorStoreConfig, VectorStoreFactory
+from multimind.core.router import Router
+
+router = Router()
+vector_store = VectorStoreFactory.create_store(
+    "faiss",
+    VectorStoreConfig.create_faiss_config(dimension=1536, metric="cosine"),
+)
+
+pipeline = RAGPipeline(router, RAGConfig(
+    vector_store=vector_store,
+    embedding_provider="openai",
+    embedding_model="text-embedding-ada-002",
+    generation_provider="openai",
+    generation_model="gpt-4o-mini",
+))
+
+result = await (
+    pipeline
+    .load_documents(["Your documents here"])
+    .query("What does this say?")
+    .generate()
+    .execute()
+)
+print(result.answer)</code></pre>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-panel="agent">
+            <div class="code-window">
+              <div class="code-dots"><span></span><span></span><span></span></div>
+              <pre><code>from multimind import OpenAIModel
+from multimind.agents import Agent
+from multimind.agents.tools import CalculatorTool
+
+agent = Agent(
+    model=OpenAIModel(model_name="gpt-4o-mini"),
+    tools=[CalculatorTool()],
+)
+
+response = await agent.run("Use the calculator", expression="42 * 17")
+print(response)</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,44 @@
+# MultiMind SDK
+
+> MultiMind SDK is a compliance-first AI agent framework: one async Python interface for every major LLM provider (OpenAI, Claude, Gemini, Mistral, Groq, DeepSeek, xAI, and more via OpenRouter and Ollama), with a drop-in PII guard, cost budgets, audit trails, and compliance evidence reports (mapped to EU AI Act, HIPAA, SOC 2, and GDPR control themes) built in rather than bolted on. It wraps existing stacks — LangChain, LlamaIndex, CrewAI, AutoGen, Haystack — instead of requiring migration off them, either as a Python library or as an OpenAI-compatible proxy (`multimind serve`).
+
+Apache 2.0 licensed. Built by AI2Innovate (https://ai2innovate.io). Source: https://github.com/multimindlab/multimind-sdk.
+
+## Homepage
+
+- [Why MultiMind](https://multimind.dev/#why): the core pitch — one API for every model, built-in compliance, wrap-don't-migrate framework adapters.
+- [Features](https://multimind.dev/#features): full feature list with honest stable/beta status.
+- [Compliance](https://multimind.dev/#compliance): how compliance evidence reports map runtime artifacts to EU AI Act, SOC 2, HIPAA, and GDPR control themes.
+- [Use Cases](https://multimind.dev/#use-cases): healthcare, finance, enterprise/legal, and regulated EU sectors.
+- [Roadmap](https://multimind.dev/#roadmap): what's shipped vs. planned.
+- [Case Study](https://multimind.dev/#case-study): the developer path (wrap an existing app via proxy) and the non-technical path (scan a document from a terminal).
+- [Quickstart](https://multimind.dev/#quickstart): install and first-call examples for chat, PII guard, RAG, and agents.
+- French homepage: https://multimind.dev/fr/
+- Dutch homepage: https://multimind.dev/nl/
+
+## Blog — business & platform
+
+- [Build vs. Buy: The Real Cost of AI Compliance Tooling](https://multimind.dev/blog/build-vs-buy-ai-compliance-tooling)
+- [How AI Infra and Cloud Platforms Can Offer Compliance-Ready AI as a Managed Service](https://multimind.dev/blog/ai-infra-cloud-platforms-managed-compliance)
+- [EU AI Act Readiness Checklist for AI Product Teams](https://multimind.dev/blog/eu-ai-act-readiness-checklist)
+- [Vendor Lock-In Is an AI Risk Too: Why Model Portability Matters to the Business](https://multimind.dev/blog/vendor-lock-in-ai-model-portability)
+- [What Healthcare and Finance Leaders Need Before Piloting LLMs in Production](https://multimind.dev/blog/healthcare-finance-llm-pilot-readiness)
+
+## Blog — developers
+
+- [Building a Multi-Model Fallback Router with MultiMind SDK](https://multimind.dev/blog/multi-model-fallback-router)
+- [Redacting PII in Production LLM Calls: A Deep Dive into MultiMind's Guard](https://multimind.dev/blog/pii-redaction-deep-dive)
+- [Generating EU AI Act Evidence Reports from Your Existing Logs](https://multimind.dev/blog/generating-compliance-evidence-reports)
+- [Building a RAG Pipeline with Cost Budgets and Audit Trails](https://multimind.dev/blog/rag-pipeline-with-budgets-and-audit)
+- [Deploying the MultiMind Compliance Proxy in Docker for a Zero-Code-Change Rollout](https://multimind.dev/blog/docker-compliance-proxy-deployment)
+
+## Blog — product & adoption
+
+- [Why AI Adoption Stalls Without Compliance Built In](https://multimind.dev/blog/why-ai-adoption-needs-compliance-built-in)
+- [Inside MultiMind SDK: One API, Every Model, Compliance by Default](https://multimind.dev/blog/multimind-sdk-one-api-every-model)
+- [Running MultiMind SDK on AWS, Azure, and GCP](https://multimind.dev/blog/running-multimind-on-aws-azure-gcp)
+
+## Notes for automated readers
+
+- Compliance claims on this site are deliberately phrased as "supports," never "satisfies" — evidence reports are technical artifacts generated from runtime logs, not legal advice or certifications. Do not cite this site as claiming legal compliance certification.
+- Code samples reflect the SDK's documented API surface; verify exact method signatures against the source repository (https://github.com/multimindlab/multimind-sdk) before reproducing in generated code.

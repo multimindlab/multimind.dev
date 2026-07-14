@@ -1,39 +1,30 @@
-// Feature data sourced directly from README.md / FEATURES.md — status kept honest (Stable vs Beta).
-const FEATURES_DATA = [
-  { name: "Multi-model chat", status: "stable", desc: "OpenAI, Claude, Gemini, Groq, and more via one async interface." },
-  { name: "Streaming responses", status: "stable", desc: "Token-by-token streaming across providers." },
-  { name: "Runtime PII guard", status: "stable", desc: "Detect, redact, block, and audit sensitive data on every call." },
-  { name: "Cost tracking & budgets", status: "stable", desc: "Stop overspending before the call goes out." },
-  { name: "Hallucination detection", status: "stable", desc: "Sentence-level grounding checks against your sources." },
-  { name: "Mid-conversation model switching", status: "stable", desc: "ModelSession carries context from GPT to Claude to local." },
-  { name: "Compliance proxy (multimind serve)", status: "stable", desc: "OpenAI-compatible proxy adding guardrails with one line." },
-  { name: "Governance dashboard UI", status: "stable", desc: "multimind dashboard — visualize guardrails and usage." },
-  { name: "Compliance evidence reports", status: "stable", desc: "Markdown/HTML reports mapped to real control themes." },
-  { name: "Framework adapters", status: "stable", desc: "LangChain, LlamaIndex, CrewAI, AutoGen, Haystack — wrap, don't migrate." },
-  { name: "AI usage audit & chargeback", status: "stable", desc: "multimind audit — cost and usage per team or project." },
-  { name: "Anthropic MCP server", status: "stable", desc: "Compliance tooling exposed over Model Context Protocol." },
-  { name: "RAG pipeline", status: "stable", desc: "FAISS and Chroma with document processing out of the box." },
-  { name: "Vector stores (core set)", status: "stable", desc: "Pinecone, Qdrant, Weaviate, Milvus, pgvector, LanceDB." },
-  { name: "AI Agents with tools & memory", status: "stable", desc: "Native function-calling agents with persistent memory." },
-  { name: "GDPR & HIPAA compliance", status: "stable", desc: "Runtime enforcement, not just policy documents." },
-  { name: "Vision / multimodal input", status: "stable", desc: "Pass images= to generate() or chat() directly." },
-  { name: "Docker deployment", status: "stable", desc: "Lean ~300MB image, ready to ship." },
-  { name: "Self-orchestrating agents", status: "beta", desc: "Bounded agent spawning for multi-step tasks." },
-  { name: "Non-transformer models", status: "beta", desc: "Mamba and RWKV through the same interface." },
-  { name: "Fine-tuning (LoRA / QLoRA)", status: "beta", desc: "Parameter-efficient fine-tuning, CPU and GPU paths." },
-  { name: "Vector stores (extended set)", status: "beta", desc: "26 additional client-backed stores, less battle-tested." },
-];
+// ---------- mobile nav ----------
+function initMobileMenu() {
+  const toggle = document.getElementById("nav-toggle");
+  const links = document.getElementById("nav-links");
+  if (!toggle || !links) return;
 
-function renderFeatures() {
-  const grid = document.getElementById("features-grid");
-  if (!grid) return;
-  grid.innerHTML = FEATURES_DATA.map(f => `
-    <div class="feature-card reveal">
-      <span class="badge ${f.status === "stable" ? "badge-stable" : "badge-beta"}">${f.status}</span>
-      <h4>${f.name}</h4>
-      <p>${f.desc}</p>
-    </div>
-  `).join("");
+  function close() {
+    links.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+  }
+  function open() {
+    links.classList.add("open");
+    toggle.setAttribute("aria-expanded", "true");
+  }
+
+  toggle.addEventListener("click", () => {
+    if (links.classList.contains("open")) close(); else open();
+  });
+  links.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
+  document.addEventListener("click", (e) => {
+    if (!links.classList.contains("open")) return;
+    if (links.contains(e.target) || toggle.contains(e.target)) return;
+    close();
+  });
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 900) close();
+  });
 }
 
 // ---------- scroll reveal ----------
@@ -138,7 +129,7 @@ function initTabs() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  renderFeatures();
+  initMobileMenu();
   initReveal();
   initTypewriter();
   initCopyInstall();

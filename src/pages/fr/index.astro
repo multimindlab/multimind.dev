@@ -1,0 +1,34 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Home from "../../components/Home.astro";
+import t from "../../i18n/fr";
+import featuresByLocale from "../../data/features";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "MultiMind SDK",
+  applicationCategory: "DeveloperApplication",
+  operatingSystem: "Cross-platform",
+  description: "Le framework d'agents IA pensé conformité — une seule API pour tous les LLM, avec rapports de preuves RGPD, HIPAA et AI Act intégrés.",
+  url: "https://multimind.dev/fr/",
+  softwareVersion: "latest",
+  license: "https://github.com/multimindlab/multimind-sdk/blob/develop/LICENSE",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  author: { "@type": "Organization", name: "AI2Innovate", url: "https://ai2innovate.io" },
+  codeRepository: "https://github.com/multimindlab/multimind-sdk",
+  programmingLanguage: "Python",
+  inLanguage: "fr",
+};
+---
+<BaseLayout
+  title="MultiMind SDK — Le framework d'agents IA pensé conformité"
+  description="Une seule API pour tous les LLM, avec RGPD, HIPAA et AI Act intégrés. Gouvernez la stack IA que vous avez déjà — LangChain, LlamaIndex, CrewAI — en changeant une seule ligne."
+  lang="fr"
+  nav={t.nav}
+  footer={t.footer}
+  translated={true}
+  jsonLd={jsonLd}
+>
+  <Home t={t} features={featuresByLocale.fr} />
+</BaseLayout>

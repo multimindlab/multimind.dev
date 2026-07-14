@@ -1,14 +1,73 @@
 ---
-const { title, description } = Astro.props;
+import enDict from "../i18n/en";
+
+const {
+  title,
+  description,
+  lang = "en",
+  nav = enDict.nav,
+  footer = enDict.footer,
+  translated = false,
+  jsonLd = null,
+  ogImage = "/assets/icon-512.png",
+} = Astro.props;
+
+const path = Astro.url.pathname;
+const canonical = new URL(path, Astro.site).toString();
+
+const localeHomepages = translated
+  ? {
+      en: new URL("/", Astro.site).toString(),
+      fr: new URL("/fr/", Astro.site).toString(),
+      nl: new URL("/nl/", Astro.site).toString(),
+    }
+  : null;
+
+const jsonLdBlocks = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang={lang}>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title}</title>
 <meta name="description" content={description}>
-<link rel="icon" href="/assets/logo.png">
+<link rel="canonical" href={canonical}>
+
+{localeHomepages && (
+  <>
+    <link rel="alternate" hreflang="en" href={localeHomepages.en}>
+    <link rel="alternate" hreflang="fr" href={localeHomepages.fr}>
+    <link rel="alternate" hreflang="nl" href={localeHomepages.nl}>
+    <link rel="alternate" hreflang="x-default" href={localeHomepages.en}>
+  </>
+)}
+
+<!-- favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:title" content={title}>
+<meta property="og:description" content={description}>
+<meta property="og:url" content={canonical}>
+<meta property="og:image" content={new URL(ogImage, Astro.site).toString()}>
+<meta property="og:site_name" content="MultiMind SDK">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content={title}>
+<meta name="twitter:description" content={description}>
+<meta name="twitter:image" content={new URL(ogImage, Astro.site).toString()}>
+<meta name="twitter:site" content="@multimindsdk">
+
+{jsonLdBlocks.map((block) => (
+  <script type="application/ld+json" set:html={JSON.stringify(block)} />
+))}
+
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -24,22 +83,30 @@ const { title, description } = Astro.props;
     <a class="brand" href="/">
       <img src="/assets/logo.png" alt="MultiMind SDK" class="brand-logo">
     </a>
-    <nav class="nav-links">
-      <a href="/#why">Why</a>
-      <a href="/#features">Features</a>
-      <a href="/#compliance">Compliance</a>
-      <a href="/#use-cases">Use Cases</a>
-      <a href="/#roadmap">Roadmap</a>
-      <a href="/#case-study">Case Study</a>
-      <a href="/#quickstart">Quickstart</a>
-      <a href="/blog">Blog</a>
+    <nav class="nav-links" id="nav-links">
+      <a href="/#why">{nav.why}</a>
+      <a href="/#features">{nav.features}</a>
+      <a href="/#compliance">{nav.compliance}</a>
+      <a href="/#use-cases">{nav.useCases}</a>
+      <a href="/#roadmap">{nav.roadmap}</a>
+      <a href="/#case-study">{nav.caseStudy}</a>
+      <a href="/#quickstart">{nav.quickstart}</a>
+      <a href="/blog">{nav.blog}</a>
+      <div class="nav-lang" aria-label="Language">
+        <a href="/" hreflang="en" aria-current={lang === "en" ? "page" : undefined}>EN</a>
+        <a href="/fr/" hreflang="fr" aria-current={lang === "fr" ? "page" : undefined}>FR</a>
+        <a href="/nl/" hreflang="nl" aria-current={lang === "nl" ? "page" : undefined}>NL</a>
+      </div>
     </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
     <div class="nav-cta">
       <a class="btn btn-ghost" href="https://github.com/multimindlab/multimind-sdk" target="_blank" rel="noopener" id="star-btn">
         <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"></path></svg>
-        <span>Star</span>
+        <span>{nav.star}</span>
       </a>
-      <a class="btn btn-primary" href="/#quickstart">Get Started</a>
+      <a class="btn btn-primary" href="/#quickstart">{nav.getStarted}</a>
     </div>
   </div>
 </header>
@@ -58,7 +125,7 @@ const { title, description } = Astro.props;
       <a href="https://opencollective.com/multimind-sdk" target="_blank" rel="noopener">Support</a>
       <a href="mailto:info@ai2innovate.io">info@ai2innovate.io</a>
     </div>
-    <p class="footer-meta">Apache 2.0 License. Built by AI2Innovate.</p>
+    <p class="footer-meta">{footer.license} <a href="https://ai2innovate.io" target="_blank" rel="noopener">AI2Innovate</a>.</p>
   </div>
 </footer>
 
