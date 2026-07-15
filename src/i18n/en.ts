@@ -7,6 +7,7 @@ export default {
     roadmap: "Roadmap",
     caseStudy: "Case Study",
     quickstart: "Quickstart",
+    sovereignty: "Sovereignty",
     blog: "Blog",
     star: "Star",
     getStarted: "Get Started",
@@ -72,6 +73,28 @@ export default {
       { label: "GDPR", desc: "lawful-basis & purpose-limitation runtime enforcement" },
     ],
     disclaimer: "Every mapping is phrased as <em>“supports,”</em> never <em>“satisfies.”</em> A report is technical evidence generated from runtime artifacts — not legal advice, a certification, or a compliance determination. An absent artifact means absent evidence, not absent risk.",
+  },
+  sovereignty: {
+    heading: "Sovereign-ready AI for Europe",
+    lede: "Digital sovereignty isn’t a feature you buy — it’s an architecture where your data, your models, and your evidence stay under your control. MultiMind is built for exactly that.",
+    cards: [
+      {
+        icon: "⌂",
+        title: "Runs entirely on your infrastructure",
+        desc: "Local models via Ollama, on-premises or on EU-hosted infrastructure — prompts, documents, and audit logs never have to leave your environment. The PII scanner even works offline, with no API key.",
+      },
+      {
+        icon: "⇌",
+        title: "No lock-in to any non-EU provider",
+        desc: "The same one-line swap that moves a workload from GPT to Claude moves it from a US cloud to an EU-hosted or local model — via <code>multimind serve</code>, without touching application code.",
+      },
+      {
+        icon: "★",
+        title: "EU AI Act & GDPR evidence, from your own logs",
+        desc: "Art. 12 record-keeping, Art. 50 transparency, lawful-basis and purpose-limitation enforcement — evidenced from audit and cost logs your app already produces, generated on your own machines.",
+      },
+    ],
+    disclaimer: "MultiMind supports European digital-sovereignty goals through architecture — local execution, provider portability, and self-generated evidence. That is a design property, not a certification or a legal determination.",
   },
   useCases: {
     heading: "Where it fits",

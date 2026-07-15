@@ -7,6 +7,7 @@ export default {
     roadmap: "Feuille de route",
     caseStudy: "Étude de cas",
     quickstart: "Démarrage",
+    sovereignty: "Souveraineté",
     blog: "Blog",
     star: "Star",
     getStarted: "Commencer",
@@ -72,6 +73,28 @@ export default {
       { label: "RGPD", desc: "base légale & limitation des finalités appliquées en exécution" },
     ],
     disclaimer: "Chaque correspondance est formulée comme <em>«&nbsp;soutient&nbsp;»</em>, jamais <em>«&nbsp;satisfait&nbsp;»</em>. Un rapport est une preuve technique générée à partir d’artefacts d’exécution — pas un avis juridique, une certification, ou une détermination de conformité. Un artefact absent signifie une preuve absente, pas un risque absent.",
+  },
+  sovereignty: {
+    heading: "Une IA prête pour la souveraineté européenne",
+    lede: "La souveraineté numérique n’est pas une fonctionnalité qu’on achète — c’est une architecture où vos données, vos modèles et vos preuves restent sous votre contrôle. MultiMind est conçu exactement pour cela.",
+    cards: [
+      {
+        icon: "⌂",
+        title: "Fonctionne entièrement sur votre infrastructure",
+        desc: "Modèles locaux via Ollama, sur site ou sur une infrastructure hébergée en Europe — les prompts, documents et journaux d’audit n’ont jamais à quitter votre environnement. Le scanner PII fonctionne même hors ligne, sans clé API.",
+      },
+      {
+        icon: "⇌",
+        title: "Aucune dépendance à un fournisseur non européen",
+        desc: "Le même changement d’une ligne qui déplace une charge de travail de GPT vers Claude la déplace d’un cloud américain vers un modèle hébergé en Europe ou local — via <code>multimind serve</code>, sans toucher au code applicatif.",
+      },
+      {
+        icon: "★",
+        title: "Preuves AI Act & RGPD, à partir de vos propres journaux",
+        desc: "Tenue de registres (Art. 12), transparence (Art. 50), base légale et limitation des finalités — attestées à partir des journaux d’audit et de coûts que votre application produit déjà, générées sur vos propres machines.",
+      },
+    ],
+    disclaimer: "MultiMind soutient les objectifs européens de souveraineté numérique par son architecture — exécution locale, portabilité entre fournisseurs et preuves auto-générées. C’est une propriété de conception, pas une certification ni une détermination juridique.",
   },
   useCases: {
     heading: "Où MultiMind s’intègre",

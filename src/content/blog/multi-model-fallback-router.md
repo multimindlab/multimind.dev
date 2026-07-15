@@ -82,4 +82,4 @@ async def generate_with_health_aware_fallback(prompt: str, models: list, **kwarg
 
 None of the above changes if you wrap each model with the [compliance guard](/blog/pii-redaction-deep-dive) — `guard(gpt, ...)`, `guard(claude, ...)`, `guard(gemini, ...)` — since the guard wraps the same `generate()` interface the router is already calling. PII redaction, budget enforcement, and audit logging apply per-provider regardless of which one ends up serving a given request, which matters if you need the audit trail to reflect exactly which provider actually handled a call after a fallback.
 
-Full model interface reference in the [quickstart](/#quickstart).
+Full model interface reference in the [GitHub quickstart](https://github.com/multimindlab/multimind-sdk#readme).

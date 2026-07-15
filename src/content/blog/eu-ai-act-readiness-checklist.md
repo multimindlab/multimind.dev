@@ -44,4 +44,4 @@ multimind compliance report-evidence \
   --format html -o evidence.html
 ```
 
-If you're preparing for this conversation with legal or a customer's security team and want to see what the generated evidence actually looks like, the [quickstart](/#quickstart) walks through it, or reach out at [info@ai2innovate.io](mailto:info@ai2innovate.io).
+If you're preparing for this conversation with legal or a customer's security team and want to see what the generated evidence actually looks like, the [GitHub quickstart](https://github.com/multimindlab/multimind-sdk#readme) walks through it, or reach out at [info@ai2innovate.io](mailto:info@ai2innovate.io).

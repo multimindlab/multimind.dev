@@ -7,12 +7,10 @@ Apache 2.0 licensed. Built by AI2Innovate (https://ai2innovate.io). Source: http
 ## Homepage
 
 - [Why MultiMind](https://multimind.dev/#why): the core pitch — one API for every model, built-in compliance, wrap-don't-migrate framework adapters.
-- [Features](https://multimind.dev/#features): full feature list with honest stable/beta status.
-- [Compliance](https://multimind.dev/#compliance): how compliance evidence reports map runtime artifacts to EU AI Act, SOC 2, HIPAA, and GDPR control themes.
-- [Use Cases](https://multimind.dev/#use-cases): healthcare, finance, enterprise/legal, and regulated EU sectors.
+- [Features](https://multimind.dev/#features): full feature list with honest alpha/beta status.
+- [Sovereignty & Compliance](https://multimind.dev/#sovereignty): sovereign-ready architecture — local/on-prem execution via Ollama, provider portability away from non-EU clouds — plus how compliance evidence reports map runtime artifacts to EU AI Act, SOC 2, HIPAA, and GDPR control themes. A design property, not a certification.
 - [Roadmap](https://multimind.dev/#roadmap): what's shipped vs. planned.
 - [Case Study](https://multimind.dev/#case-study): the developer path (wrap an existing app via proxy) and the non-technical path (scan a document from a terminal).
-- [Quickstart](https://multimind.dev/#quickstart): install and first-call examples for chat, PII guard, RAG, and agents.
 - French homepage: https://multimind.dev/fr/
 - Dutch homepage: https://multimind.dev/nl/
 

@@ -7,6 +7,7 @@ export default {
     roadmap: "Roadmap",
     caseStudy: "Case study",
     quickstart: "Snelstart",
+    sovereignty: "Soevereiniteit",
     blog: "Blog",
     star: "Star",
     getStarted: "Aan de slag",
@@ -72,6 +73,28 @@ export default {
       { label: "AVG (GDPR)", desc: "handhaving van rechtsgrond & doelbinding tijdens runtime" },
     ],
     disclaimer: "Elke koppeling wordt geformuleerd als <em>“ondersteunt”</em>, nooit als <em>“voldoet aan”</em>. Een rapport is technisch bewijs gegenereerd uit runtime-artefacten — geen juridisch advies, certificering of compliance-vaststelling. Een ontbrekend artefact betekent ontbrekend bewijs, niet afwezig risico.",
+  },
+  sovereignty: {
+    heading: "Soevereiniteitsklare AI voor Europa",
+    lede: "Digitale soevereiniteit is geen functie die je koopt — het is een architectuur waarin je data, je modellen en je bewijs onder jouw controle blijven. MultiMind is daar precies voor gebouwd.",
+    cards: [
+      {
+        icon: "⌂",
+        title: "Draait volledig op je eigen infrastructuur",
+        desc: "Lokale modellen via Ollama, on-premises of op in de EU gehoste infrastructuur — prompts, documenten en auditlogs hoeven je omgeving nooit te verlaten. De PII-scanner werkt zelfs offline, zonder API-sleutel.",
+      },
+      {
+        icon: "⇌",
+        title: "Geen lock-in bij een niet-Europese aanbieder",
+        desc: "Dezelfde wijziging van één regel die een workload van GPT naar Claude verplaatst, verplaatst hem van een Amerikaanse cloud naar een in de EU gehost of lokaal model — via <code>multimind serve</code>, zonder de applicatiecode aan te raken.",
+      },
+      {
+        icon: "★",
+        title: "AI Act- & AVG-bewijs, uit je eigen logs",
+        desc: "Registratieplicht (Art. 12), transparantie (Art. 50), rechtsgrond en doelbinding — aangetoond met de audit- en kostenlogs die je applicatie al produceert, gegenereerd op je eigen machines.",
+      },
+    ],
+    disclaimer: "MultiMind ondersteunt Europese digitale-soevereiniteitsdoelen door architectuur — lokale uitvoering, portabiliteit tussen aanbieders en zelf gegenereerd bewijs. Dat is een ontwerpeigenschap, geen certificering of juridische vaststelling.",
   },
   useCases: {
     heading: "Waar het past",

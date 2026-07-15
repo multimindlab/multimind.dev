@@ -39,4 +39,4 @@ Swapping the model backing a feature is a one-line change, not a migration proje
 
 If vendor risk isn't currently part of how your organization evaluates its AI stack, the concrete way to introduce it is to ask what the actual recovery plan is for each of the three scenarios above — repricing, deprecation, outage — today, for your primary model provider. If the honest answer is "we'd rewrite the integration," that's the risk, quantified in engineering weeks, and it's the same conversation as "what's our disaster recovery plan," just for a dependency that's newer than most others on the list.
 
-More on the model interface and `ModelSession` in the [quickstart](/#quickstart), or reach out at [info@ai2innovate.io](mailto:info@ai2innovate.io) to talk through a specific migration.
+More on the model interface and `ModelSession` in the [GitHub quickstart](https://github.com/multimindlab/multimind-sdk#readme), or reach out at [info@ai2innovate.io](mailto:info@ai2innovate.io) to talk through a specific migration.

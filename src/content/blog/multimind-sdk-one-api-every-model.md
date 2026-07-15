@@ -95,8 +95,8 @@ response = await agent.run("Use the calculator", expression="42 * 17")
 
 Both sit behind the same model interface, so the same PII guard, budget, and audit wrapping applies whether the call originated from a chat completion, a RAG query, or an agent's tool call.
 
-## What's stable vs. beta
+## What's alpha vs. beta
 
-The SDK is explicit about status rather than presenting everything as equally production-ready. Multi-model chat, streaming, the PII guard, cost budgets, hallucination detection, framework adapters, and the compliance proxy are stable. Self-orchestrating agents, non-transformer model support (Mamba, RWKV), fine-tuning, and the extended vector store set are beta — usable, less battle-tested. That distinction is maintained directly against [FEATURES.md](https://github.com/multimindlab/multimind-sdk/blob/develop/FEATURES.md) in the repo, so it doesn't drift from what's actually shipped.
+The SDK is explicit about status rather than presenting everything as equally production-ready. Multi-model chat, streaming, the PII guard, cost budgets, hallucination detection, framework adapters, and the compliance proxy are alpha. Self-orchestrating agents, non-transformer model support (Mamba, RWKV), fine-tuning, and the extended vector store set are beta. That distinction is maintained directly against [FEATURES.md](https://github.com/multimindlab/multimind-sdk/blob/develop/FEATURES.md) in the repo, so it doesn't drift from what's actually shipped.
 
 Full docs and source: [github.com/multimindlab/multimind-sdk](https://github.com/multimindlab/multimind-sdk).

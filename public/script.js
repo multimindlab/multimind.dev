@@ -113,25 +113,9 @@ function initCopyInstall() {
   });
 }
 
-// ---------- quickstart tabs ----------
-function initTabs() {
-  const buttons = document.querySelectorAll(".tab-btn");
-  const panels = document.querySelectorAll(".tab-panel");
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      buttons.forEach(b => b.classList.remove("active"));
-      panels.forEach(p => p.classList.remove("active"));
-      btn.classList.add("active");
-      const panel = document.querySelector(`.tab-panel[data-panel="${btn.dataset.tab}"]`);
-      if (panel) panel.classList.add("active");
-    });
-  });
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
   initReveal();
   initTypewriter();
   initCopyInstall();
-  initTabs();
 });

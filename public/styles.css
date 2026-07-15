@@ -32,6 +32,14 @@ code, pre {
 
 img { max-width: 100%; display: block; }
 
+/* ---------- neural background canvas ---------- */
+#neural-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
 /* ---------- background blobs ---------- */
 .bg-blobs {
   position: fixed;
@@ -85,7 +93,8 @@ img { max-width: 100%; display: block; }
   align-items: center;
   gap: 24px;
 }
-.brand-logo { height: 28px; }
+.brand { flex-shrink: 0; display: flex; align-items: center; }
+.brand-logo { height: 28px; width: auto; max-width: none; }
 .nav-links {
   display: flex;
   align-items: center;
@@ -348,7 +357,7 @@ main { position: relative; z-index: 1; }
   padding: 3px 9px;
   border-radius: 999px;
 }
-.badge-stable { background: rgba(40, 200, 130, 0.15); color: #3fd48f; }
+.badge-alpha { background: rgba(124, 92, 252, 0.18); color: #a58cff; }
 .badge-beta { background: rgba(254, 188, 46, 0.15); color: #febc2e; }
 
 /* ---------- compliance ---------- */

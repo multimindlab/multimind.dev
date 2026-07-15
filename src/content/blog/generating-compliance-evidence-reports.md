@@ -41,4 +41,4 @@ Practically, this means the report is only as complete as your logging coverage.
 
 Since the command reads from log files and a period, generating a report monthly (or per compliance review cycle) is just re-running the same command with the current period and the accumulated logs — nothing to reconfigure. That's what turns this from a one-time audit prep exercise into infrastructure: the report is regenerable on demand, from data your application is already producing, rather than a project someone has to remember to do before every review.
 
-For the full picture of what feeds into `audit.jsonl` and `costs.jsonl` in the first place, see the [PII redaction](/blog/pii-redaction-deep-dive) and [quickstart](/#quickstart) guides.
+For the full picture of what feeds into `audit.jsonl` and `costs.jsonl` in the first place, see the [PII redaction](/blog/pii-redaction-deep-dive) and [GitHub quickstart](https://github.com/multimindlab/multimind-sdk#readme) guides.

@@ -22,7 +22,7 @@ Running this as a container rather than a process on the application host means 
 
 ## A minimal container pattern
 
-MultiMind SDK's Docker deployment is listed as a stable, shipped feature — check the [repo](https://github.com/multimindlab/multimind-sdk) for whether a published image already exists before building your own. If you're containerizing it yourself, the shape is standard for a pip-installed Python CLI:
+MultiMind SDK's Docker deployment is a shipped feature — check the [repo](https://github.com/multimindlab/multimind-sdk) for whether a published image already exists before building your own. If you're containerizing it yourself, the shape is standard for a pip-installed Python CLI:
 
 ```dockerfile
 FROM python:3.11-slim
