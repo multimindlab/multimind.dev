@@ -19,7 +19,7 @@ Compliance risk gets a seat at the table when a company evaluates its AI stack. 
 
 The instinct to avoid this is often "let's write our own abstraction layer over the model providers we use" — which is a reasonable idea that, in practice, becomes another internal system someone has to maintain, extend for every new provider, and keep in sync with each provider's API changes. That's a real cost, and it's the reason most teams that start this project don't finish it, or finish a version that only covers the two providers they had time for.
 
-The alternative is using an interface that already treats this as its job. MultiMind SDK's model layer wraps OpenAI, Claude, Gemini, Mistral, Groq, DeepSeek, xAI, Together, Perplexity, Fireworks, Cerebras, 300+ models via OpenRouter, and local models via Ollama behind one async interface:
+The alternative is using an interface that already treats this as its job. MultiMind SDK's model layer wraps OpenAI, Claude, Gemini, Mistral, Grok, DeepSeek, xAI, Together, Perplexity, Fireworks, Cerebras, 300+ models via OpenRouter, and local models via Ollama behind one async interface:
 
 ```python
 from multimind import OpenAIModel, ClaudeModel, GeminiModel

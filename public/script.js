@@ -113,9 +113,23 @@ function initCopyInstall() {
   });
 }
 
+// ---------- features show more / less ----------
+function initFeaturesToggle() {
+  const btn = document.getElementById("features-toggle");
+  const grid = document.getElementById("features-grid");
+  if (!btn || !grid) return;
+  btn.addEventListener("click", () => {
+    const collapsed = grid.classList.toggle("features-collapsed");
+    btn.setAttribute("aria-expanded", String(!collapsed));
+    btn.textContent = collapsed ? btn.dataset.showMore : btn.dataset.showLess;
+    if (collapsed) grid.scrollIntoView({ block: "start" });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
   initReveal();
   initTypewriter();
   initCopyInstall();
+  initFeaturesToggle();
 });

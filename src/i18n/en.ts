@@ -28,7 +28,7 @@ export default {
       {
         icon: "◎",
         title: "One API, every model",
-        desc: "OpenAI, Claude, Gemini, Mistral, Groq, DeepSeek, xAI, Together, Perplexity, Fireworks, Cerebras, 300+ models via OpenRouter, and local models via Ollama — one async interface, with streaming.",
+        desc: "OpenAI, Claude, Gemini, Mistral, Grok, DeepSeek, xAI, Together, Perplexity, Fireworks, Cerebras, 300+ models via OpenRouter, and local models via Ollama — one async interface, with streaming.",
       },
       {
         icon: "⛨",
@@ -55,6 +55,21 @@ export default {
         title: "RAG that works",
         desc: "FAISS and Chroma with document processing out of the box, plus 40+ client-backed vector stores including Pinecone, Qdrant, Weaviate, Milvus, pgvector, and LanceDB.",
       },
+      {
+        icon: "◉",
+        title: "Persistent memory — agents that remember",
+        desc: "Agents ship with persistent memory: context, decisions, and preferences survive across sessions instead of resetting with every conversation. Your agent on Monday knows what it learned on Friday.",
+      },
+      {
+        icon: "❖",
+        title: "A second brain from your documents",
+        desc: "Pair agent memory with the RAG pipeline and 40+ vector stores to build a durable second brain from your own documents — what your team knows becomes something your agents can retrieve.",
+      },
+      {
+        icon: "⌂",
+        title: "Your memory, your infrastructure",
+        desc: "The second brain lives where you run it — with local models via Ollama it works entirely on-premises, so accumulated knowledge never leaves your environment.",
+      },
     ],
   },
   features: {
@@ -62,6 +77,8 @@ export default {
     ledePre: "Every status below is honest — Beta means beta. Full detail in ",
     ledeLinkText: "FEATURES.md",
     ledePost: ".",
+    showMore: "Show all features",
+    showLess: "Show fewer features",
   },
   compliance: {
     heading: "Built for the EU AI Act and every framework you’re already accountable to",
@@ -85,7 +102,7 @@ export default {
       },
       {
         icon: "⇌",
-        title: "No lock-in to any non-EU provider",
+        title: "Maintaining full digital sovereignty with lock-in-free, EU-based solutions",
         desc: "The same one-line swap that moves a workload from GPT to Claude moves it from a US cloud to an EU-hosted or local model — via <code>multimind serve</code>, without touching application code.",
       },
       {

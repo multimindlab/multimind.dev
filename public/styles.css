@@ -284,6 +284,7 @@ main { position: relative; z-index: 1; }
   line-height: 1.6;
   color: #d7d7ea;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .hero-code pre {
   /* reserves height for the tallest typewriter snippet (4 lines) so cycling
@@ -359,6 +360,10 @@ main { position: relative; z-index: 1; }
 }
 .badge-alpha { background: rgba(124, 92, 252, 0.18); color: #a58cff; }
 .badge-beta { background: rgba(254, 188, 46, 0.15); color: #febc2e; }
+
+/* collapsed features grid: show first 8 cards, toggle reveals the rest */
+.features-collapsed .feature-card:nth-child(n + 9) { display: none; }
+.features-toggle-wrap { text-align: center; margin-top: 28px; }
 
 /* ---------- compliance ---------- */
 .compliance-layout {
@@ -520,6 +525,14 @@ main { position: relative; z-index: 1; }
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   align-items: start;
+}
+
+/* grid children must be allowed to shrink below their <pre> content width,
+   otherwise wide code snippets overflow the viewport on mobile (Safari) */
+.compliance-layout > *,
+.case-study-grid > *,
+.roadmap-layout > * {
+  min-width: 0;
 }
 .case-label { font-size: 0.85rem; color: var(--text-dim); margin: 0 0 10px; font-weight: 600; }
 .case-subhead {

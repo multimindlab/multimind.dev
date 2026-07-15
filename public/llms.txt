@@ -1,12 +1,12 @@
 # MultiMind SDK
 
-> MultiMind SDK is a compliance-first AI agent framework: one async Python interface for every major LLM provider (OpenAI, Claude, Gemini, Mistral, Groq, DeepSeek, xAI, and more via OpenRouter and Ollama), with a drop-in PII guard, cost budgets, audit trails, and compliance evidence reports (mapped to EU AI Act, HIPAA, SOC 2, and GDPR control themes) built in rather than bolted on. It wraps existing stacks — LangChain, LlamaIndex, CrewAI, AutoGen, Haystack — instead of requiring migration off them, either as a Python library or as an OpenAI-compatible proxy (`multimind serve`).
+> MultiMind SDK is a compliance-first AI agent framework: one async Python interface for every major LLM provider (OpenAI, Claude, Gemini, Mistral, Grok, DeepSeek, xAI, and more via OpenRouter and Ollama), with a drop-in PII guard, cost budgets, audit trails, and compliance evidence reports (mapped to EU AI Act, HIPAA, SOC 2, and GDPR control themes) built in rather than bolted on. It wraps existing stacks — LangChain, LlamaIndex, CrewAI, AutoGen, Haystack — instead of requiring migration off them, either as a Python library or as an OpenAI-compatible proxy (`multimind serve`).
 
 Apache 2.0 licensed. Built by AI2Innovate (https://ai2innovate.io). Source: https://github.com/multimindlab/multimind-sdk.
 
 ## Homepage
 
-- [Why MultiMind](https://multimind.dev/#why): the core pitch — one API for every model, built-in compliance, wrap-don't-migrate framework adapters.
+- [Why MultiMind](https://multimind.dev/#why): the core pitch — one API for every model, built-in compliance, wrap-don't-migrate framework adapters, and persistent memory: agents that remember across sessions, plus RAG over your own documents as a durable "second brain" that runs on your infrastructure.
 - [Features](https://multimind.dev/#features): full feature list with honest alpha/beta status.
 - [Sovereignty & Compliance](https://multimind.dev/#sovereignty): sovereign-ready architecture — local/on-prem execution via Ollama, provider portability away from non-EU clouds — plus how compliance evidence reports map runtime artifacts to EU AI Act, SOC 2, HIPAA, and GDPR control themes. A design property, not a certification.
 - [Roadmap](https://multimind.dev/#roadmap): what's shipped vs. planned.
@@ -24,6 +24,7 @@ Apache 2.0 licensed. Built by AI2Innovate (https://ai2innovate.io). Source: http
 
 ## Blog — developers
 
+- [Persistent Memory: Giving Your AI Agents a Second Brain](https://multimind.dev/blog/persistent-memory-second-brain-ai-agents)
 - [Building a Multi-Model Fallback Router with MultiMind SDK](https://multimind.dev/blog/multi-model-fallback-router)
 - [Redacting PII in Production LLM Calls: A Deep Dive into MultiMind's Guard](https://multimind.dev/blog/pii-redaction-deep-dive)
 - [Generating EU AI Act Evidence Reports from Your Existing Logs](https://multimind.dev/blog/generating-compliance-evidence-reports)

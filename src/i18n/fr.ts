@@ -28,7 +28,7 @@ export default {
       {
         icon: "◎",
         title: "Une seule API, tous les modèles",
-        desc: "OpenAI, Claude, Gemini, Mistral, Groq, DeepSeek, xAI, Together, Perplexity, Fireworks, Cerebras, 300+ modèles via OpenRouter, et des modèles locaux via Ollama — une seule interface asynchrone, avec streaming.",
+        desc: "OpenAI, Claude, Gemini, Mistral, Grok, DeepSeek, xAI, Together, Perplexity, Fireworks, Cerebras, 300+ modèles via OpenRouter, et des modèles locaux via Ollama — une seule interface asynchrone, avec streaming.",
       },
       {
         icon: "⛨",
@@ -38,7 +38,7 @@ export default {
       {
         icon: "⇄",
         title: "Gouvernez la stack que vous avez déjà",
-        desc: "Pas besoin de migrer hors de LangChain, LlamaIndex, CrewAI, AutoGen ou Haystack — enveloppez-les. Lancez <code>multimind serve</code> et pointez n’importe quelle app compatible OpenAI vers lui pour ajouter redaction PII, budgets et audit en une ligne.",
+        desc: "Pas besoin de migrer hors de LangChain, LlamaIndex, CrewAI, AutoGen ou Haystack — enveloppez-les. Lancez <code>multimind serve</code> et pointez n’importe quelle app compatible OpenAI vers lui pour ajouter la rédaction PII, budgets et audit en une ligne.",
       },
       {
         icon: "$",
@@ -55,6 +55,21 @@ export default {
         title: "Un RAG qui fonctionne vraiment",
         desc: "FAISS et Chroma avec traitement de documents prêt à l’emploi, plus 40+ bases vectorielles supportées dont Pinecone, Qdrant, Weaviate, Milvus, pgvector et LanceDB.",
       },
+      {
+        icon: "◉",
+        title: "Mémoire persistante — des agents qui se souviennent",
+        desc: "Les agents sont livrés avec une mémoire persistante : contexte, décisions et préférences survivent d’une session à l’autre au lieu d’être réinitialisés à chaque conversation. Votre agent du lundi sait ce qu’il a appris le vendredi.",
+      },
+      {
+        icon: "❖",
+        title: "Un second cerveau à partir de vos documents",
+        desc: "Associez la mémoire des agents au pipeline RAG et à 40+ bases vectorielles pour construire un second cerveau durable à partir de vos propres documents — ce que votre équipe sait devient récupérable par vos agents.",
+      },
+      {
+        icon: "⌂",
+        title: "Votre mémoire, votre infrastructure",
+        desc: "Le second cerveau vit là où vous l’exécutez — avec des modèles locaux via Ollama, il fonctionne entièrement sur site, et les connaissances accumulées ne quittent jamais votre environnement.",
+      },
     ],
   },
   features: {
@@ -62,6 +77,8 @@ export default {
     ledePre: "Chaque statut ci-dessous est honnête — Beta veut dire beta. Détails complets dans ",
     ledeLinkText: "FEATURES.md",
     ledePost: ".",
+    showMore: "Voir toutes les fonctionnalités",
+    showLess: "Voir moins de fonctionnalités",
   },
   compliance: {
     heading: "Conçu pour l’AI Act européen et tous les référentiels dont vous êtes déjà responsable",
@@ -85,7 +102,7 @@ export default {
       },
       {
         icon: "⇌",
-        title: "Aucune dépendance à un fournisseur non européen",
+        title: "Une souveraineté numérique totale, avec des solutions européennes sans lock-in",
         desc: "Le même changement d’une ligne qui déplace une charge de travail de GPT vers Claude la déplace d’un cloud américain vers un modèle hébergé en Europe ou local — via <code>multimind serve</code>, sans toucher au code applicatif.",
       },
       {

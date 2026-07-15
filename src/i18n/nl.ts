@@ -28,7 +28,7 @@ export default {
       {
         icon: "◎",
         title: "Eén API, elk model",
-        desc: "OpenAI, Claude, Gemini, Mistral, Groq, DeepSeek, xAI, Together, Perplexity, Fireworks, Cerebras, 300+ modellen via OpenRouter, en lokale modellen via Ollama — één asynchrone interface, met streaming.",
+        desc: "OpenAI, Claude, Gemini, Mistral, Grok, DeepSeek, xAI, Together, Perplexity, Fireworks, Cerebras, 300+ modellen via OpenRouter, en lokale modellen via Ollama — één asynchrone interface, met streaming.",
       },
       {
         icon: "⛨",
@@ -55,6 +55,21 @@ export default {
         title: "RAG die echt werkt",
         desc: "FAISS en Chroma met documentverwerking out-of-the-box, plus 40+ ondersteunde vectorstores waaronder Pinecone, Qdrant, Weaviate, Milvus, pgvector en LanceDB.",
       },
+      {
+        icon: "◉",
+        title: "Persistent geheugen — agents die onthouden",
+        desc: "Agents worden geleverd met persistent geheugen: context, beslissingen en voorkeuren blijven bewaard tussen sessies in plaats van bij elk gesprek te resetten. Je agent van maandag weet wat hij vrijdag heeft geleerd.",
+      },
+      {
+        icon: "❖",
+        title: "Een tweede brein uit je eigen documenten",
+        desc: "Combineer agent-geheugen met de RAG-pipeline en 40+ vectorstores om een duurzaam tweede brein te bouwen uit je eigen documenten — wat je team weet, wordt iets wat je agents kunnen ophalen.",
+      },
+      {
+        icon: "⌂",
+        title: "Jouw geheugen, jouw infrastructuur",
+        desc: "Het tweede brein leeft waar jij het draait — met lokale modellen via Ollama werkt het volledig on-premises, zodat opgebouwde kennis je omgeving nooit verlaat.",
+      },
     ],
   },
   features: {
@@ -62,6 +77,8 @@ export default {
     ledePre: "Elke status hieronder is eerlijk — Beta betekent beta. Volledige details in ",
     ledeLinkText: "FEATURES.md",
     ledePost: ".",
+    showMore: "Alle functies tonen",
+    showLess: "Minder functies tonen",
   },
   compliance: {
     heading: "Gebouwd voor de Europese AI Act en elk kader waar je al verantwoordelijk voor bent",
@@ -85,7 +102,7 @@ export default {
       },
       {
         icon: "⇌",
-        title: "Geen lock-in bij een niet-Europese aanbieder",
+        title: "Volledige digitale soevereiniteit met lock-in-vrije, Europese oplossingen",
         desc: "Dezelfde wijziging van één regel die een workload van GPT naar Claude verplaatst, verplaatst hem van een Amerikaanse cloud naar een in de EU gehost of lokaal model — via <code>multimind serve</code>, zonder de applicatiecode aan te raken.",
       },
       {

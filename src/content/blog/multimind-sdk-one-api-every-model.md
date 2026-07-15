@@ -9,7 +9,7 @@ MultiMind SDK is a Python framework for building AI applications where model acc
 
 ## One interface, every provider
 
-At the core is a single async interface over OpenAI, Claude, Gemini, Mistral, Groq, DeepSeek, xAI, Together, Perplexity, Fireworks, Cerebras, 300+ models via OpenRouter, and local models via Ollama.
+At the core is a single async interface over OpenAI, Claude, Gemini, Mistral, Grok, DeepSeek, xAI, Together, Perplexity, Fireworks, Cerebras, 300+ models via OpenRouter, and local models via Ollama.
 
 ```python
 from multimind import OpenAIModel, ClaudeModel, GeminiModel

@@ -1,5 +1,5 @@
 const en = [
-  { name: "Multi-model chat", status: "alpha", desc: "OpenAI, Claude, Gemini, Groq, and more via one async interface." },
+  { name: "Multi-model chat", status: "alpha", desc: "OpenAI, Claude, Gemini, Grok, and more via one async interface." },
   { name: "Streaming responses", status: "alpha", desc: "Token-by-token streaming across providers." },
   { name: "Runtime PII guard", status: "alpha", desc: "Detect, redact, block, and audit sensitive data on every call." },
   { name: "Cost tracking & budgets", status: "alpha", desc: "Stop overspending before the call goes out." },
@@ -24,7 +24,7 @@ const en = [
 ];
 
 const fr = [
-  { name: "Chat multi-modèles", status: "alpha", desc: "OpenAI, Claude, Gemini, Groq, et plus via une seule interface asynchrone." },
+  { name: "Chat multi-modèles", status: "alpha", desc: "OpenAI, Claude, Gemini, Grok, et plus via une seule interface asynchrone." },
   { name: "Réponses en streaming", status: "alpha", desc: "Streaming token par token sur tous les fournisseurs." },
   { name: "Garde-fou PII en exécution", status: "alpha", desc: "Détecte, masque, bloque et audite les données sensibles à chaque appel." },
   { name: "Suivi des coûts & budgets", status: "alpha", desc: "Stoppe les dépassements avant que l'appel ne parte." },
@@ -49,7 +49,7 @@ const fr = [
 ];
 
 const nl = [
-  { name: "Multi-model chat", status: "alpha", desc: "OpenAI, Claude, Gemini, Groq en meer via één asynchrone interface." },
+  { name: "Multi-model chat", status: "alpha", desc: "OpenAI, Claude, Gemini, Grok en meer via één asynchrone interface." },
   { name: "Streaming responses", status: "alpha", desc: "Token-voor-token streaming bij alle providers." },
   { name: "Runtime PII-guard", status: "alpha", desc: "Detecteert, redigeert, blokkeert en auditeert gevoelige gegevens bij elke aanroep." },
   { name: "Kostenbewaking & budgetten", status: "alpha", desc: "Stopt overbesteding vóórdat de aanroep vertrekt." },
