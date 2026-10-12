@@ -36,7 +36,7 @@
     ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
 
     linkDist = Math.max(100, Math.min(150, W * 0.11));
-    const count = Math.max(24, Math.min(90, Math.floor((W * H) / 20000)));
+    const count = Math.max(18, Math.min(64, Math.floor((W * H) / 32000)));
     nodes = [];
     for (let i = 0; i < count; i++) {
       const layer = i % 3;
@@ -119,7 +119,7 @@
             const d2 = dx * dx + dy * dy;
             if (d2 > linkDist * linkDist) continue;
             const d = Math.sqrt(d2);
-            const a = (1 - d / linkDist) * 0.22;
+            const a = (1 - d / linkDist) * 0.09;
             ctx.strokeStyle = `rgba(${cr},${cg},${cb},${a})`;
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
@@ -140,7 +140,7 @@
         const d2 = dx * dx + dy * dy;
         if (d2 > reach * reach) continue;
         const d = Math.sqrt(d2);
-        const a = (1 - d / reach) * 0.3;
+        const a = (1 - d / reach) * 0.14;
         ctx.strokeStyle = `rgba(${cr},${cg},${cb},${a})`;
         ctx.beginPath();
         ctx.moveTo(p.x, p.y);
@@ -170,7 +170,7 @@
       const x = a.x + (b.x - a.x) * pu.t;
       const y = a.y + (b.y - a.y) * pu.t;
       const fade = Math.sin(pu.t * Math.PI);
-      ctx.fillStyle = `rgba(${pr},${pg},${pb},${0.75 * fade})`;
+      ctx.fillStyle = `rgba(${pr},${pg},${pb},${0.4 * fade})`;
       ctx.beginPath();
       ctx.arc(x, y, 1.8, 0, Math.PI * 2);
       ctx.fill();
@@ -181,7 +181,7 @@
     for (let i = 0; i < nodes.length; i++) {
       const n = nodes[i];
       const p = pos[i];
-      const glow = 0.35 + 0.25 * Math.sin(n.phase);
+      const glow = 0.16 + 0.1 * Math.sin(n.phase);
       ctx.fillStyle = `rgba(${cr},${cg},${cb},${glow})`;
       ctx.beginPath();
       ctx.arc(p.x, p.y, n.r, 0, Math.PI * 2);

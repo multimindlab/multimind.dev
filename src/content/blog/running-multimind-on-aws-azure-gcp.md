@@ -43,7 +43,7 @@ Azure OpenAI Service is the most direct fit, since it's explicitly designed to b
 
 Vertex AI hosts Gemini alongside Model Garden's third-party and open models. MultiMind's `GeminiModel` already talks to Google's Gemini API directly; for workloads that specifically need to run through Vertex (for IAM, VPC-SC, or billing-consolidation reasons), the same upstream-proxy approach applies — front the Vertex endpoint with the OpenAI-compatible shape the proxy expects, and governance follows the same call path as everywhere else.
 
-## Fully on-prem or air-gapped: Ollama
+## Fully on-prem: Ollama
 
 Not every environment can send data to a cloud provider at all. MultiMind's local-model support via Ollama means the entire stack — model, PII guard, budget enforcement, audit logging — can run without a network call leaving the host. This is the same code path as the cloud-backed providers; only the upstream changes. For regulated environments where the answer to "can we send this to any external API" is no, this is usually the actual starting point, not an afterthought.
 

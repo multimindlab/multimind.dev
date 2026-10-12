@@ -21,6 +21,16 @@ export default {
     titleLine2: "dat compliance vooropstelt",
     sub: "Multi-model AI met ingebouwde AVG-, HIPAA- en AI Act-bewijsrapportage. Werkt met elk model. Draait overal.",
   },
+  pipeline: {
+    label: "Pad van een request",
+    app: "Jouw applicatie",
+    appHint: "LangChain, LlamaIndex, openai SDK",
+    core: "multimind",
+    coreHint: "één proces vóór het model",
+    guards: ["PII-guard", "Kostenbudget", "Auditlog"],
+    model: "Elk model",
+    modelHint: "gehost of on-prem",
+  },
   why: {
     heading1: "De meeste AI-frameworks laten compliance aan jou over.",
     heading2: "MultiMind niet.",
@@ -87,7 +97,7 @@ export default {
       { label: "Europese AI Act", desc: "Art. 12 registratieplicht, Art. 50 transparantie" },
       { label: "SOC 2", desc: "monitoring, logische toegang" },
       { label: "HIPAA", desc: "164.312(b) auditcontroles" },
-      { label: "AVG (GDPR)", desc: "handhaving van rechtsgrond & doelbinding tijdens runtime" },
+      { label: "AVG (GDPR)", desc: "een door de aanroeper aangeleverde controle op rechtsgrond en doelbinding: toegestaan, geweigerd of niet geconfigureerd" },
     ],
     disclaimer: "Elke koppeling wordt geformuleerd als <em>“ondersteunt”</em>, nooit als <em>“voldoet aan”</em>. Een rapport is technisch bewijs gegenereerd uit runtime-artefacten — geen juridisch advies, certificering of compliance-vaststelling. Een ontbrekend artefact betekent ontbrekend bewijs, niet afwezig risico.",
   },
@@ -108,7 +118,7 @@ export default {
       {
         icon: "★",
         title: "AI Act- & AVG-bewijs, uit je eigen logs",
-        desc: "Registratieplicht (Art. 12), transparantie (Art. 50), rechtsgrond en doelbinding — aangetoond met de audit- en kostenlogs die je applicatie al produceert, gegenereerd op je eigen machines.",
+        desc: "Registratieplicht (Art. 12), transparantie (Art. 50), en een door de aanroeper aangeleverde controle op rechtsgrond en doelbinding — aangetoond met de audit- en kostenlogs die je applicatie al produceert, gegenereerd op je eigen machines.",
       },
     ],
     disclaimer: "MultiMind ondersteunt Europese digitale-soevereiniteitsdoelen door architectuur — lokale uitvoering, portabiliteit tussen aanbieders en zelf gegenereerd bewijs. Dat is een ontwerpeigenschap, geen certificering of juridische vaststelling.",
@@ -118,7 +128,7 @@ export default {
     cards: [
       { icon: "✚", title: "Zorg", desc: "PHI-bewuste PII-guard, geauditeerde toegangslogs, en koppeling aan HIPAA-controlethema’s voor klinische en zorgtech AI-toepassingen." },
       { icon: "%", title: "Finance", desc: "Kostenbudgetten die overbesteding blokkeren vóór de aanroep, plus volledige audittrails en doorbelasting van gebruik via <code>multimind audit</code>." },
-      { icon: "§", title: "Enterprise & juridisch", desc: "AVG-handhaving tijdens runtime — rechtsgrond, doelbinding en bewaartermijn — geëvalueerd op echte verwerkingsverzoeken, niet alleen beleidsdocumenten." },
+      { icon: "§", title: "Enterprise & juridisch", desc: "Een door de aanroeper aangeleverde AVG-controle — rechtsgrond, doelbinding en bewaartermijn — die toegestaan, geweigerd of niet geconfigureerd teruggeeft." },
       { icon: "EU", title: "Gereguleerde EU-sectoren", desc: "Aan de AI Act gekoppelde bewijsrapporten (Art. 12 / Art. 50), rechtstreeks gegenereerd uit de audit- en kostenlogs die je app al produceert." },
     ],
   },
@@ -145,7 +155,6 @@ export default {
     plannedLabel: "Gepland — nog niet gebouwd",
     items: [
       { title: "No-code fine-tuning UI", desc: "een dashboard-front-end voor de bestaande LoRA/QLoRA fine-tuning-engine, met hyperparameteroptimalisatie en multi-task fine-tuning." },
-      { title: "RAG fine-tuning met synthetische data", desc: "genereer en train op synthetische voorbeelden uit je eigen documenten." },
       { title: "Geavanceerd analytics-dashboard", desc: "diepere kosten- en prestatietrends naast de huidige uitgaven- en PII-grafieken." },
       { title: "No-code agentbouwer", desc: "een visuele drag-and-drop workflowbouwer voor het samenstellen van agents en multi-model pipelines. Agents zijn vandaag code-first (<code>Agent</code> + tools in Python); er bestaat nog geen visuele interface." },
       { title: "Verbeteringen in multi-agent-orkestratie", desc: "agent-naar-agent-communicatie en hiërarchische agentsystemen, voortbouwend op de huidige begrensde agent-orkestratie." },
@@ -162,7 +171,7 @@ export default {
       para: "Geen migratie nodig. Start de compliance-proxy en laat elke OpenAI-compatibele client (LangChain, LlamaIndex, de kale <code>openai</code>-SDK, wat dan ook) ernaartoe wijzen.",
       step1Label: "1. Start de proxy",
       step2Label: "2. Wijzig de base_url — dat is alles",
-      result: "Resultaat: elke aanroep via de proxy wordt PII-geredigeerd, tegen het budget gecontroleerd, en gelogd naar <code>audit.jsonl</code> — zonder enige wijziging aan de applicatiecode van LangChain, LlamaIndex of CrewAI.",
+      result: "Resultaat: elke aanroep via de proxy wordt PII-geredigeerd, tegen het budget gecontroleerd, en gelogd naar <code>audit.jsonl</code> — zonder enige wijziging aan de applicatiecode van LangChain, LlamaIndex of CrewAI. Behandel toolresultaten en opgehaalde tekst als onbetrouwbare invoer.",
     },
     nonTech: {
       subhead: "Voor de rest: gevoelige gegevens opsporen zonder code te schrijven",
@@ -171,7 +180,7 @@ export default {
       paraPost: ".",
       step1Label: "1. Scan een zin op gevoelige gegevens",
       step2Label: "2. Lees het resultaat — eenvoudig en duidelijk",
-      result: "Resultaat: gevoelige gegevens worden onderschept voordat ze een AI-leverancier bereiken — en dezelfde guard produceert een fraudebestendige audittrail die vastlegt wat er gevonden werd en wanneer, zonder ooit de gevoelige waarden zelf op te slaan. Zo overhandigen aan een auditor.",
+      result: "Resultaat: gevoelige gegevens worden onderschept voordat ze een AI-leverancier bereiken. Dezelfde guard schrijft een append-only <code>audit.jsonl</code> met types, aantallen en hash-tags, en slaat de gevoelige waarden zelf nooit op.",
     },
   },
   quickstart: {

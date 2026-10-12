@@ -21,6 +21,16 @@ export default {
     titleLine2: "pensé conformité, dès le départ",
     sub: "IA multi-modèles avec rapports de conformité RGPD, HIPAA & AI Act intégrés. Compatible avec tous les modèles. Déployable partout.",
   },
+  pipeline: {
+    label: "Chemin d’une requête",
+    app: "Votre application",
+    appHint: "LangChain, LlamaIndex, SDK openai",
+    core: "multimind",
+    coreHint: "un processus devant le modèle",
+    guards: ["Garde-fou PII", "Budget", "Journal d’audit"],
+    model: "N’importe quel modèle",
+    modelHint: "cloud ou sur site",
+  },
   why: {
     heading1: "La plupart des frameworks d’IA vous laissent gérer la conformité seul.",
     heading2: "Pas MultiMind.",
@@ -87,7 +97,7 @@ export default {
       { label: "AI Act européen", desc: "Art. 12 tenue de registres, Art. 50 transparence" },
       { label: "SOC 2", desc: "surveillance, accès logique" },
       { label: "HIPAA", desc: "contrôles d’audit 164.312(b)" },
-      { label: "RGPD", desc: "base légale & limitation des finalités appliquées en exécution" },
+      { label: "RGPD", desc: "un contrôle de base légale et de limitation des finalités fourni par l’appelant : autorisé, refusé, ou non configuré" },
     ],
     disclaimer: "Chaque correspondance est formulée comme <em>«&nbsp;soutient&nbsp;»</em>, jamais <em>«&nbsp;satisfait&nbsp;»</em>. Un rapport est une preuve technique générée à partir d’artefacts d’exécution — pas un avis juridique, une certification, ou une détermination de conformité. Un artefact absent signifie une preuve absente, pas un risque absent.",
   },
@@ -108,7 +118,7 @@ export default {
       {
         icon: "★",
         title: "Preuves AI Act & RGPD, à partir de vos propres journaux",
-        desc: "Tenue de registres (Art. 12), transparence (Art. 50), base légale et limitation des finalités — attestées à partir des journaux d’audit et de coûts que votre application produit déjà, générées sur vos propres machines.",
+        desc: "Tenue de registres (Art. 12), transparence (Art. 50), et un contrôle de base légale et de limitation des finalités fourni par l’appelant — attestés à partir des journaux d’audit et de coûts que votre application produit déjà, générés sur vos propres machines.",
       },
     ],
     disclaimer: "MultiMind soutient les objectifs européens de souveraineté numérique par son architecture — exécution locale, portabilité entre fournisseurs et preuves auto-générées. C’est une propriété de conception, pas une certification ni une détermination juridique.",
@@ -118,7 +128,7 @@ export default {
     cards: [
       { icon: "✚", title: "Santé", desc: "Garde-fou PII sensible aux données de santé (PHI), accès journalisé et audité, et correspondance avec les référentiels HIPAA pour les applications d’IA cliniques et de santé numérique." },
       { icon: "%", title: "Finance", desc: "Des budgets de coûts qui bloquent le dépassement avant l’appel, ainsi que des pistes d’audit complètes et une refacturation d’usage via <code>multimind audit</code>." },
-      { icon: "§", title: "Entreprise & juridique", desc: "Application du RGPD en exécution — base légale, limitation des finalités et conservation — évaluée sur de vraies demandes de traitement, pas seulement des documents de politique." },
+      { icon: "§", title: "Entreprise & juridique", desc: "Un contrôle RGPD fourni par l’appelant — base légale, limitation des finalités et conservation — qui renvoie autorisé, refusé ou non configuré." },
       { icon: "UE", title: "Secteurs européens régulés", desc: "Rapports de preuves conformes à l’AI Act (Art. 12 / Art. 50), générés directement à partir des journaux d’audit et de coûts que votre application produit déjà." },
     ],
   },
@@ -145,7 +155,6 @@ export default {
     plannedLabel: "Prévu — pas encore construit",
     items: [
       { title: "Interface de fine-tuning sans code", desc: "une interface pour le moteur de fine-tuning LoRA/QLoRA existant, avec optimisation des hyperparamètres et fine-tuning multi-tâches." },
-      { title: "Fine-tuning RAG avec données synthétiques", desc: "générez et entraînez sur des exemples synthétiques à partir de vos propres documents." },
       { title: "Tableau de bord analytique avancé", desc: "des tendances de coûts et de performance plus poussées au-delà des graphiques actuels de dépenses et de PII." },
       { title: "Constructeur d’agents sans code", desc: "un constructeur visuel par glisser-déposer pour composer des agents et des pipelines multi-modèles. Les agents sont aujourd’hui codés en Python (<code>Agent</code> + outils) ; aucune interface visuelle n’existe encore." },
       { title: "Améliorations de l’orchestration multi-agents", desc: "communication agent-à-agent et systèmes d’agents hiérarchiques, en s’appuyant sur l’orchestration d’agents bornée d’aujourd’hui." },
@@ -162,7 +171,7 @@ export default {
       para: "Aucune migration. Démarrez le proxy de conformité, puis pointez n’importe quel client compatible OpenAI (LangChain, LlamaIndex, le SDK <code>openai</code> brut, ou autre) vers lui.",
       step1Label: "1. Démarrer le proxy",
       step2Label: "2. Changer le base_url — c’est tout",
-      result: "Résultat : chaque appel passant par le proxy est nettoyé des PII, vérifié par rapport au budget, et journalisé dans <code>audit.jsonl</code> — sans aucun changement au code applicatif de LangChain, LlamaIndex ou CrewAI.",
+      result: "Résultat : chaque appel passant par le proxy est nettoyé des PII, vérifié par rapport au budget, et journalisé dans <code>audit.jsonl</code> — sans aucun changement au code applicatif de LangChain, LlamaIndex ou CrewAI. Traitez les résultats d’outils et le texte récupéré comme une entrée non fiable.",
     },
     nonTech: {
       subhead: "Pour tous les autres : détectez les données sensibles sans écrire de code",
@@ -171,7 +180,7 @@ export default {
       paraPost: " complet.",
       step1Label: "1. Scanner une phrase pour détecter des données sensibles",
       step2Label: "2. Lire le résultat — simple et clair",
-      result: "Résultat : les données sensibles sont interceptées avant même d’atteindre un fournisseur d’IA — et le même garde-fou produit une piste d’audit infalsifiable qui enregistre ce qui a été trouvé et quand, sans jamais stocker les valeurs sensibles elles-mêmes. Remise à un auditeur telle quelle.",
+      result: "Résultat : les données sensibles sont interceptées avant même d’atteindre un fournisseur d’IA. Le même garde-fou écrit un <code>audit.jsonl</code> en ajout seul, avec les types, les comptes et des empreintes, et ne stocke jamais les valeurs sensibles elles-mêmes.",
     },
   },
   quickstart: {

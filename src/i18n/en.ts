@@ -21,6 +21,16 @@ export default {
     titleLine2: "AI agent framework",
     sub: "Multi-model AI with built-in GDPR, HIPAA & EU AI Act evidence reporting. Works with any model. Runs anywhere.",
   },
+  pipeline: {
+    label: "Request path",
+    app: "Your application",
+    appHint: "LangChain, LlamaIndex, openai SDK",
+    core: "multimind",
+    coreHint: "one process in front of the model",
+    guards: ["PII guard", "Cost budget", "Audit log"],
+    model: "Any model",
+    modelHint: "hosted or on-prem",
+  },
   why: {
     heading1: "Most AI frameworks assume you’ll handle compliance yourself.",
     heading2: "MultiMind doesn’t.",
@@ -87,7 +97,7 @@ export default {
       { label: "EU AI Act", desc: "Art. 12 record-keeping, Art. 50 transparency" },
       { label: "SOC 2", desc: "monitoring, logical access" },
       { label: "HIPAA", desc: "164.312(b) audit controls" },
-      { label: "GDPR", desc: "lawful-basis & purpose-limitation runtime enforcement" },
+      { label: "GDPR", desc: "a caller-supplied lawful-basis and purpose-limitation check: allowed, denied, or not configured" },
     ],
     disclaimer: "Every mapping is phrased as <em>“supports,”</em> never <em>“satisfies.”</em> A report is technical evidence generated from runtime artifacts — not legal advice, a certification, or a compliance determination. An absent artifact means absent evidence, not absent risk.",
   },
@@ -108,7 +118,7 @@ export default {
       {
         icon: "★",
         title: "EU AI Act & GDPR evidence, from your own logs",
-        desc: "Art. 12 record-keeping, Art. 50 transparency, lawful-basis and purpose-limitation enforcement — evidenced from audit and cost logs your app already produces, generated on your own machines.",
+        desc: "Art. 12 record-keeping, Art. 50 transparency, and a caller-supplied lawful-basis and purpose-limitation check — evidenced from audit and cost logs your app already produces, generated on your own machines.",
       },
     ],
     disclaimer: "MultiMind supports European digital-sovereignty goals through architecture — local execution, provider portability, and self-generated evidence. That is a design property, not a certification or a legal determination.",
@@ -118,7 +128,7 @@ export default {
     cards: [
       { icon: "✚", title: "Healthcare", desc: "PHI-aware PII guard, audit-logged access, and HIPAA control-theme mapping for clinical and health-tech AI applications." },
       { icon: "%", title: "Finance", desc: "Cost budgets that block overspend before the call, plus full audit trails and usage chargeback via <code>multimind audit</code>." },
-      { icon: "§", title: "Enterprise & Legal", desc: "GDPR runtime enforcement — lawful basis, purpose limitation, and retention — evaluated against real processing requests, not policy documents alone." },
+      { icon: "§", title: "Enterprise & Legal", desc: "A caller-supplied GDPR check — lawful basis, purpose limitation, and retention — that returns allowed, denied, or not configured." },
       { icon: "EU", title: "Regulated EU sectors", desc: "EU AI Act-mapped evidence reports (Art. 12 / Art. 50) generated straight from the audit and cost logs your app already produces." },
     ],
   },
@@ -145,7 +155,6 @@ export default {
     plannedLabel: "Planned — not built yet",
     items: [
       { title: "No-code fine-tuning UI", desc: "a dashboard front-end for the existing LoRA/QLoRA fine-tuning engine, with hyperparameter optimization and multi-task fine-tuning." },
-      { title: "RAG fine-tuning with synthetic data", desc: "generate and train on synthetic examples from your own documents." },
       { title: "Advanced analytics dashboard", desc: "deeper cost and performance trends beyond today’s spend and PII charts." },
       { title: "No-code agent builder", desc: "a visual, drag-and-drop workflow builder for composing agents and multi-model pipelines. Agents are code-first today (<code>Agent</code> + tools in Python); no visual interface exists yet." },
       { title: "Multi-agent orchestration upgrades", desc: "agent-to-agent communication and hierarchical agent systems, building on today’s bounded agent orchestration." },
@@ -162,7 +171,7 @@ export default {
       para: "No migration. Start the compliance proxy, then point any OpenAI-compatible client (LangChain, LlamaIndex, the raw <code>openai</code> SDK, anything) at it.",
       step1Label: "1. Start the proxy",
       step2Label: "2. Change the base_url — that’s it",
-      result: "Result: every call through the proxy is PII-redacted, budget-checked, and logged to <code>audit.jsonl</code> — with zero changes to LangChain, LlamaIndex, or CrewAI application code.",
+      result: "Result: every call through the proxy is PII-redacted, budget-checked, and logged to <code>audit.jsonl</code> — with zero changes to LangChain, LlamaIndex, or CrewAI application code. Treat tool results and retrieved text as untrusted input.",
     },
     nonTech: {
       subhead: "For everyone else: catch sensitive data without writing code",
@@ -171,7 +180,7 @@ export default {
       paraPost: ".",
       step1Label: "1. Scan a sentence for sensitive data",
       step2Label: "2. Read the result — plain and simple",
-      result: "Result: sensitive data is caught before it ever reaches an AI vendor — and the same guard produces a tamper-evident audit trail that records what was found and when, without ever storing the sensitive values themselves. Handed to an auditor as-is.",
+      result: "Result: sensitive data is caught before it ever reaches an AI vendor. The same guard writes an append-only <code>audit.jsonl</code> of types, counts, and hash tags, and never stores the sensitive values themselves.",
     },
   },
   quickstart: {
