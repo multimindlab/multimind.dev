@@ -3,14 +3,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Home from "../components/Home.astro";
 import t from "../i18n/en";
 import featuresByLocale from "../data/features";
+import { alternateNames, keywordsFor } from "../seo";
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   name: "MultiMind SDK",
+  alternateName: alternateNames,
   applicationCategory: "DeveloperApplication",
   operatingSystem: "Cross-platform",
-  description: "The compliance-first AI agent framework — one API for every LLM, with GDPR, HIPAA & EU AI Act evidence reporting built in.",
+  keywords: keywordsFor("en"),
+  description: "multimind-sdk is the compliance-first AI agent framework — one API for every LLM, with GDPR, HIPAA & EU AI Act evidence reporting built in.",
   url: "https://multimind.dev",
   softwareVersion: "latest",
   license: "https://github.com/multimindlab/multimind-sdk/blob/develop/LICENSE",
@@ -22,7 +25,7 @@ const jsonLd = {
 ---
 <BaseLayout
   title="MultiMind SDK — The Compliance-First AI Agent Framework"
-  description="One API for every LLM, with GDPR, HIPAA & EU AI Act support built in. Govern the AI stack you already have — LangChain, LlamaIndex, CrewAI — by changing one line."
+  description="multimind-sdk is the compliance-first AI agent framework. One Python API for every LLM, with a PII guard and GDPR, HIPAA, and EU AI Act evidence reporting."
   lang="en"
   nav={t.nav}
   footer={t.footer}

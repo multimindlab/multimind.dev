@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { keywordsFor } from "../../seo";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -22,11 +23,11 @@ const jsonLd = {
   url: new URL(`/blog/${post.slug}`, Astro.site).toString(),
   author: { "@type": "Organization", name: "AI2Innovate", url: "https://ai2innovate.io" },
   publisher: { "@type": "Organization", name: "MultiMind SDK", url: "https://multimind.dev" },
-  keywords: (post.data.tags || []).join(", "),
+  keywords: keywordsFor("en", post.data.tags || []),
   inLanguage: "en",
 };
 ---
-<BaseLayout title={`${post.data.title} — MultiMind SDK`} description={post.data.description} jsonLd={jsonLd}>
+<BaseLayout title={`${post.data.title} — MultiMind SDK`} description={post.data.description} jsonLd={jsonLd} keywords={keywordsFor("en", post.data.tags || [])}>
   <section class="section">
     <div class="section-inner" style="max-width: 760px;">
       <p class="disclaimer reveal">

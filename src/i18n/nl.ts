@@ -9,6 +9,7 @@ export default {
     quickstart: "Snelstart",
     sovereignty: "Soevereiniteit",
     blog: "Blog",
+    docs: "Docs",
     star: "Star",
     getStarted: "Aan de slag",
     viewOnGithub: "Bekijk op GitHub",

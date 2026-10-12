@@ -1,7 +1,7 @@
 {
   "name": "MultiMind SDK",
   "short_name": "MultiMind",
-  "description": "The compliance-first AI agent framework — one API for every LLM, with GDPR, HIPAA & EU AI Act support built in.",
+  "description": "multimind-sdk is the compliance-first AI agent framework — one API for every LLM, with GDPR, HIPAA & EU AI Act support built in.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0a0a12",

@@ -2,7 +2,15 @@
 
 > MultiMind SDK is a compliance-first AI agent framework: one async Python interface for every major LLM provider (OpenAI, Claude, Gemini, Mistral, Grok, DeepSeek, xAI, and more via OpenRouter and Ollama), with a drop-in PII guard, cost budgets, audit trails, and compliance evidence reports (mapped to EU AI Act, HIPAA, SOC 2, and GDPR control themes) built in rather than bolted on. It wraps existing stacks — LangChain, LlamaIndex, CrewAI, AutoGen, Haystack — instead of requiring migration off them, either as a Python library or as an OpenAI-compatible proxy (`multimind serve`).
 
-Apache 2.0 licensed. Built by AI2Innovate (https://ai2innovate.io). Source: https://github.com/multimindlab/multimind-sdk.
+Apache 2.0 licensed. Built by AI2Innovate (https://ai2innovate.io). Source: https://github.com/multimindlab/multimind-sdk. Docs: https://docs.multimind.dev/. Package: https://pypi.org/project/multimind-sdk/ (`pip install multimind-sdk`).
+
+Also known as: multimind-sdk, multimind sdk, MultiMind SDK.
+
+Full text for language models: https://multimind.dev/llms-full.txt
+
+## Keywords
+
+multimind-sdk, MultiMind SDK, multimind sdk, pip install multimind-sdk, compliance-first AI agent framework, AI compliance SDK, Python LLM SDK, PII guard for LLMs, PII redaction, EU AI Act evidence reporting, GDPR HIPAA AI guardrails, OpenAI-compatible compliance proxy, multimind serve, multi-model LLM router, LangChain compliance wrapper, sovereign AI SDK, on-prem LLM compliance, open source AI agent framework, LLM governance, LLM audit trail, LLM cost tracking, hallucination detection, EU sovereign AI, MCP compliance server, multimind dashboard, SOC 2 evidence reporting, AI agent memory, AI usage audit
 
 ## Homepage
 

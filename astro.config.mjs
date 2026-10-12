@@ -12,6 +12,7 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
+      filter: (page) => !page.includes("llms-full.txt"),
       i18n: {
         defaultLocale: "en",
         locales: { en: "en", fr: "fr", nl: "nl" },

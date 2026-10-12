@@ -22,4 +22,8 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
+# LLM-readable site text (https://llmstxt.org)
+# Summary: https://multimind.dev/llms.txt
+# Full text: https://multimind.dev/llms-full.txt
+
 Sitemap: https://multimind.dev/sitemap-index.xml
