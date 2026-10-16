@@ -74,8 +74,31 @@ const { t, features } = Astro.props;
     </div>
   </section>
 
+  <!-- REVERSI -->
+  <section id="reversi" class="section section-alt">
+    <div class="section-inner">
+      <p class="section-kicker reveal">{t.reversi.kicker}</p>
+      <h2 class="reveal">{t.reversi.heading}</h2>
+      <p class="section-lede reveal">{t.reversi.lede}</p>
+      <div class="grid grid-4">
+        {t.reversi.cards.map((card, i) => (
+          <div class="card reveal">
+            <span class="card-index">{String(i + 1).padStart(2, "0")}</span>
+            <h3>{card.title}</h3>
+            <p>{card.desc}</p>
+          </div>
+        ))}
+      </div>
+      <div class="section-actions reveal">
+        <a class="btn btn-primary" href="https://reversi.mintlify.site/" target="_blank" rel="noopener">{t.reversi.docs}</a>
+        <a class="btn btn-outline" href="https://github.com/multimindlab/Reversi" target="_blank" rel="noopener">{t.reversi.github}</a>
+      </div>
+      <p class="disclaimer reveal">{t.reversi.note}</p>
+    </div>
+  </section>
+
   <!-- FEATURES -->
-  <section id="features" class="section section-alt">
+  <section id="features" class="section">
     <div class="section-inner">
       <p class="section-kicker reveal">{t.nav.features}</p>
       <h2 class="reveal">{t.features.heading}</h2>

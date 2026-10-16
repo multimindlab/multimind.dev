@@ -5,6 +5,7 @@ export default {
     compliance: "Compliance",
     useCases: "Use Cases",
     roadmap: "Roadmap",
+    reversi: "Reversi",
     caseStudy: "Case Study",
     quickstart: "Quickstart",
     sovereignty: "Sovereignty",
@@ -163,6 +164,32 @@ export default {
     disclaimerPre: "Sourced from ",
     disclaimerLinkText: "ROADMAP.md",
     disclaimerPost: " — kept honest, not a release commitment.",
+  },
+  reversi: {
+    kicker: "Reversi · Coming soon",
+    heading: "When an agent acts, you need a way back",
+    lede: "A chat log shows what the model said. It does not show which order it placed, which refund it issued, or which email it sent — and it cannot undo any of them. Reversi sits between the agent and its tools, so a bad run can be traced, stopped, or rolled back.",
+    cards: [
+      {
+        title: "See what actually changed",
+        desc: "The intent is recorded before the tool runs. If that record fails, the call does not run. You get who did what, and why — not a reconstruction after the fact.",
+      },
+      {
+        title: "Undo the steps that can be undone",
+        desc: "Roll a run back from the newest action. Reversi will not tell you an irreversible step was undone.",
+      },
+      {
+        title: "Hold the steps that cannot",
+        desc: "Payments, email, and deletions wait for a person. The agent cannot approve its own irreversible action.",
+      },
+      {
+        title: "Keep evidence you can trust",
+        desc: "The ledger is hash-chained. If someone edits, deletes, or reorders the record, that shows up.",
+      },
+    ],
+    docs: "Read the docs",
+    github: "View on GitHub",
+    note: "Open source under Apache 2.0. The docs and repository are available now; the full launch on this site is coming soon.",
   },
   caseStudy: {
     heading: "Case studies",

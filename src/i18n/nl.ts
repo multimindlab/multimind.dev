@@ -5,6 +5,7 @@ export default {
     compliance: "Compliance",
     useCases: "Toepassingen",
     roadmap: "Roadmap",
+    reversi: "Reversi",
     caseStudy: "Case study",
     quickstart: "Snelstart",
     sovereignty: "Soevereiniteit",
@@ -163,6 +164,32 @@ export default {
     disclaimerPre: "Bron: ",
     disclaimerLinkText: "ROADMAP.md",
     disclaimerPost: " — eerlijk bijgehouden, geen releasetoezegging.",
+  },
+  reversi: {
+    kicker: "Reversi · Binnenkort",
+    heading: "Als een agent handelt, heb je een weg terug nodig",
+    lede: "Een chatlog laat zien wat het model zei. Hij laat niet zien welke bestelling het plaatste, welke terugbetaling het deed of welke e-mail het verstuurde — en hij kan niets daarvan terugdraaien. Reversi zit tussen de agent en zijn tools, zodat een mislukte run te volgen, te stoppen of terug te draaien is.",
+    cards: [
+      {
+        title: "Zie wat er echt veranderde",
+        desc: "De intentie wordt vastgelegd vóórdat de tool draait. Mislukt die vastlegging, dan gaat de aanroep niet door. Je weet wie wat deed, en waarom — geen reconstructie achteraf.",
+      },
+      {
+        title: "Draai terug wat terug kan",
+        desc: "Draai een run terug vanaf de nieuwste actie. Reversi zal nooit beweren dat een onomkeerbare stap ongedaan is gemaakt.",
+      },
+      {
+        title: "Houd tegen wat niet terug kan",
+        desc: "Betalingen, e-mail en verwijderingen wachten op een mens. De agent kan zijn eigen onomkeerbare actie niet goedkeuren.",
+      },
+      {
+        title: "Bewaar bewijs dat je kunt vertrouwen",
+        desc: "Het logboek is hash-geketend. Wijzigt, verwijdert of herschikt iemand het record, dan is dat zichtbaar.",
+      },
+    ],
+    docs: "Lees de docs",
+    github: "Bekijk op GitHub",
+    note: "Open source onder Apache 2.0. De documentatie en de repository zijn er al; de volledige lancering op deze site volgt binnenkort.",
   },
   caseStudy: {
     heading: "Case studies",

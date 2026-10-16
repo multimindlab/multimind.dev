@@ -5,6 +5,7 @@ export default {
     compliance: "Conformité",
     useCases: "Cas d’usage",
     roadmap: "Feuille de route",
+    reversi: "Reversi",
     caseStudy: "Étude de cas",
     quickstart: "Démarrage",
     sovereignty: "Souveraineté",
@@ -163,6 +164,32 @@ export default {
     disclaimerPre: "Source : ",
     disclaimerLinkText: "ROADMAP.md",
     disclaimerPost: " — tenu à jour honnêtement, pas un engagement de livraison.",
+  },
+  reversi: {
+    kicker: "Reversi · Bientôt disponible",
+    heading: "Quand un agent agit, il vous faut un retour en arrière",
+    lede: "Un journal de conversation montre ce que le modèle a dit. Il ne montre pas quelle commande il a passée, quel remboursement il a émis, ni quel e-mail il a envoyé — et il ne peut rien annuler. Reversi se place entre l’agent et ses outils, pour qu’une exécution ratée puisse être retracée, arrêtée ou annulée.",
+    cards: [
+      {
+        title: "Voir ce qui a vraiment changé",
+        desc: "L’intention est enregistrée avant que l’outil ne s’exécute. Si cet enregistrement échoue, l’appel n’a pas lieu. Vous savez qui a fait quoi, et pourquoi — pas une reconstitution après coup.",
+      },
+      {
+        title: "Annuler les étapes qui peuvent l’être",
+        desc: "Revenez en arrière depuis l’action la plus récente. Reversi ne prétendra jamais qu’une étape irréversible a été annulée.",
+      },
+      {
+        title: "Retenir les étapes qui ne le peuvent pas",
+        desc: "Paiements, e-mails et suppressions attendent une personne. L’agent ne peut pas approuver sa propre action irréversible.",
+      },
+      {
+        title: "Garder une preuve fiable",
+        desc: "Le journal est chaîné par empreinte. Si quelqu’un modifie, supprime ou réordonne l’enregistrement, cela se voit.",
+      },
+    ],
+    docs: "Lire la documentation",
+    github: "Voir sur GitHub",
+    note: "Open source sous Apache 2.0. La documentation et le dépôt sont déjà disponibles ; le lancement complet sur ce site arrive bientôt.",
   },
   caseStudy: {
     heading: "Études de cas",

@@ -15,6 +15,7 @@ multimind-sdk, MultiMind SDK, multimind sdk, pip install multimind-sdk, complian
 ## Homepage
 
 - [Why MultiMind](https://multimind.dev/#why): the core pitch — one API for every model, built-in compliance, wrap-don't-migrate framework adapters, and persistent memory: agents that remember across sessions, plus RAG over your own documents as a durable "second brain" that runs on your infrastructure.
+- [Reversi](https://multimind.dev/#reversi): coming soon — when an agent changes a real system (orders, refunds, email), Reversi records the intent before the tool runs, rolls back what can be undone, holds irreversible steps for a person, and keeps a hash-chained ledger. Docs: https://reversi.mintlify.site/ Source: https://github.com/multimindlab/Reversi
 - [Features](https://multimind.dev/#features): full feature list with honest alpha/beta status.
 - [Sovereignty & Compliance](https://multimind.dev/#sovereignty): sovereign-ready architecture — local/on-prem execution via Ollama, provider portability away from non-EU clouds — plus how compliance evidence reports map runtime artifacts to EU AI Act, SOC 2, HIPAA, and GDPR control themes. A design property, not a certification.
 - [Roadmap](https://multimind.dev/#roadmap): what's shipped vs. planned.
