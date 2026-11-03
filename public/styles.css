@@ -905,3 +905,7 @@ main { position: relative; z-index: 1; }
   margin: 0 0 18px;
 }
 .blog-post-body pre code { background: none; border: none; padding: 0; }
+.blog-post-body table { display: block; overflow-x: auto; width: 100%; border-collapse: collapse; margin: 0 0 24px; font-size: 0.88rem; }
+.blog-post-body th, .blog-post-body td { text-align: left; vertical-align: top; padding: 10px 12px; border: 1px solid var(--card-border); min-width: 140px; }
+.blog-post-body th { background: var(--card); color: var(--text); font-weight: 600; }
+.blog-post-body td { color: var(--text-dim); }
