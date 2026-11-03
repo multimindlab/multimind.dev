@@ -1,6 +1,6 @@
 ---
 title: "What Healthcare and Finance Leaders Need Before Piloting LLMs in Production"
-description: "The technical questions a healthcare or finance leader should be able to answer before an LLM pilot touches real patient or customer data — and how to answer them without slowing the pilot down."
+description: "The technical questions healthcare and finance leaders should answer before an LLM pilot touches real patient or customer data, without slowing it down."
 pubDate: 2026-07-14
 tags: ["business", "healthcare", "finance", "compliance"]
 ---

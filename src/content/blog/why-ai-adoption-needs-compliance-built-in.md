@@ -1,6 +1,6 @@
 ---
 title: "Why AI Adoption Stalls Without Compliance Built In"
-description: "Most enterprise AI pilots don't die from bad models — they die in the handoff to legal, security, and compliance review. Here's why governance has to be runtime infrastructure, not a document."
+description: "Enterprise AI pilots rarely die from bad models; they die in legal and security review. Why governance must be runtime infrastructure, not a document."
 pubDate: 2026-07-14
 tags: ["ai-adoption", "compliance", "governance"]
 ---

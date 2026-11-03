@@ -1,6 +1,6 @@
 ---
 title: "Deploying the MultiMind Compliance Proxy in Docker for a Zero-Code-Change Rollout"
-description: "Running multimind serve as a sidecar container so an existing application gets PII redaction, budgets, and audit logging without touching its code."
+description: "Run multimind serve as a sidecar so an existing app gets PII redaction, budgets, and audit logging without touching its code."
 pubDate: 2026-07-14
 tags: ["tech", "docker", "deployment", "infra"]
 ---

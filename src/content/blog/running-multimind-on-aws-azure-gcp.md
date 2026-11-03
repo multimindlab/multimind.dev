@@ -1,6 +1,6 @@
 ---
 title: "Running MultiMind SDK on AWS, Azure, and GCP"
-description: "You don't need a different SDK per cloud. Here's how MultiMind's proxy pattern applies to AWS Bedrock, Azure OpenAI, and GCP Vertex AI — plus fully on-prem with Ollama."
+description: "One SDK for every cloud: how MultiMind's proxy pattern covers AWS Bedrock, Azure OpenAI, and GCP Vertex AI, plus fully on-prem with Ollama."
 pubDate: 2026-07-14
 tags: ["aws", "azure", "gcp", "cloud", "infrastructure"]
 ---

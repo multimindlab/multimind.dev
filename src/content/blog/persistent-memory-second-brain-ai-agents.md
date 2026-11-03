@@ -1,6 +1,6 @@
 ---
 title: "Persistent Memory: Giving Your AI Agents a Second Brain"
-description: "Stateless LLM calls forget everything between sessions. Here's what changes when agents remember — and how memory, portable context, and RAG combine into a second brain that lives on your own infrastructure."
+description: "What changes when AI agents remember: how memory, portable context, and RAG combine into a second brain on your own infrastructure."
 pubDate: 2026-07-15
 tags: ["tech", "agents", "memory"]
 ---

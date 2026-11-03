@@ -495,7 +495,7 @@ main { position: relative; z-index: 1; }
   transition: border-color 0.2s ease, background 0.2s ease;
 }
 .feature-card:hover { border-color: rgba(158, 176, 255, 0.45); background: #141826; }
-.feature-card h4 { margin: 0; font-size: 0.95rem; }
+.feature-card h3 { margin: 0; font-size: 0.95rem; font-weight: 600; }
 .feature-card p { margin: 0; color: var(--text-dim); font-size: 0.82rem; line-height: 1.5; }
 .badge {
   align-self: flex-start;

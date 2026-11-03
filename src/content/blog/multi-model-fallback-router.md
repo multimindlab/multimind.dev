@@ -1,6 +1,6 @@
 ---
 title: "Building a Multi-Model Fallback Router with MultiMind SDK"
-description: "A worked example of routing a request across providers with fallback on error, using MultiMind's shared async model interface — no per-provider branching."
+description: "A worked example of routing requests across providers with fallback on error, using MultiMind's shared async model interface. No per-provider branching."
 pubDate: 2026-07-14
 tags: ["tech", "python", "reliability"]
 ---

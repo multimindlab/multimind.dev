@@ -1,6 +1,6 @@
 ---
 title: "EU AI Act Readiness Checklist for AI Product Teams"
-description: "A practical, evidence-based checklist for what you actually need before an EU AI Act conversation with legal or a regulator — not legal advice, just the artifacts that matter."
+description: "A practical checklist of the evidence you need before an EU AI Act conversation with legal or a regulator. Not legal advice, just the artifacts that matter."
 pubDate: 2026-07-14
 tags: ["business", "eu-ai-act", "compliance", "checklist"]
 ---

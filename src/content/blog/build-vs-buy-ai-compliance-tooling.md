@@ -1,6 +1,6 @@
 ---
 title: "Build vs. Buy: The Real Cost of AI Compliance Tooling"
-description: "PII redaction, audit logging, and evidence reporting look like a two-week internal project. Here's what usually gets missed when teams scope it that way."
+description: "PII redaction, audit logging, and evidence reporting look like a two-week project. Here's what teams usually miss when they scope it that way."
 pubDate: 2026-07-14
 tags: ["business", "compliance", "build-vs-buy"]
 ---

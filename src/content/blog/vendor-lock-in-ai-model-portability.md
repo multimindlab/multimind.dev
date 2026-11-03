@@ -1,6 +1,6 @@
 ---
 title: "Vendor Lock-In Is an AI Risk Too: Why Model Portability Matters to the Business"
-description: "Pricing changes, deprecations, and outages are business risks, not just engineering inconveniences. Here's why model portability belongs in the same risk conversation as compliance."
+description: "Pricing changes, deprecations, and outages are business risks. Why model portability belongs in the same risk conversation as compliance."
 pubDate: 2026-07-14
 tags: ["business", "vendor-risk", "model-portability"]
 ---

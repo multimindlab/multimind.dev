@@ -1,6 +1,6 @@
 ---
 title: "Generating EU AI Act Evidence Reports from Your Existing Logs"
-description: "A walkthrough of multimind compliance report-evidence: what it reads, what it produces, and how to keep the output honest instead of overclaiming."
+description: "A walkthrough of multimind compliance report-evidence: what it reads, what it produces, and how to keep the output honest, not overclaimed."
 pubDate: 2026-07-14
 tags: ["tech", "compliance", "eu-ai-act", "cli"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Inside MultiMind SDK: One API, Every Model, Compliance by Default"
-description: "What MultiMind SDK actually does — a tour of the multi-model interface, the compliance layer, RAG and agents, and why it wraps your existing stack instead of replacing it."
+description: "A tour of MultiMind SDK: the multi-model interface, compliance layer, RAG and agents, and why it wraps your existing stack instead of replacing it."
 pubDate: 2026-07-14
 tags: ["multimind-sdk", "product"]
 ---

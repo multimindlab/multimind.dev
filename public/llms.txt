@@ -40,6 +40,11 @@ multimind-sdk, MultiMind SDK, multimind sdk, pip install multimind-sdk, complian
 - [Building a RAG Pipeline with Cost Budgets and Audit Trails](https://multimind.dev/blog/rag-pipeline-with-budgets-and-audit)
 - [Deploying the MultiMind Compliance Proxy in Docker for a Zero-Code-Change Rollout](https://multimind.dev/blog/docker-compliance-proxy-deployment)
 
+## Blog — comparisons
+
+- [MultiMind vs LiteLLM: Which Do You Need?](https://multimind.dev/blog/multimind-vs-litellm)
+- [MultiMind vs LangChain: Replace or Wrap?](https://multimind.dev/blog/multimind-vs-langchain)
+
 ## Blog — product & adoption
 
 - [Why AI Adoption Stalls Without Compliance Built In](https://multimind.dev/blog/why-ai-adoption-needs-compliance-built-in)

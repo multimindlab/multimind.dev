@@ -1,6 +1,6 @@
 ---
 title: "Redacting PII in Production LLM Calls: A Deep Dive into MultiMind's Guard"
-description: "How the guard() wrapper actually changes what a model provider sees, what block_on and strategy control, and how to check what happened after the fact."
+description: "How the guard() wrapper changes what a model provider sees, what block_on and strategy control, and how to verify what happened afterwards."
 pubDate: 2026-07-14
 tags: ["tech", "python", "pii", "compliance"]
 ---

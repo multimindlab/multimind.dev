@@ -110,7 +110,7 @@ const { t, features } = Astro.props;
         {features.map((f) => (
           <div class="feature-card reveal">
             <span class={`badge badge-${f.status}`}>{f.status}</span>
-            <h4>{f.name}</h4>
+            <h3>{f.name}</h3>
             <p>{f.desc}</p>
           </div>
         ))}

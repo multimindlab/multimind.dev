@@ -1,6 +1,6 @@
 ---
 title: "Building a RAG Pipeline with Cost Budgets and Audit Trails"
-description: "Standing up a RAG pipeline with MultiMind, and why the same governance concerns from single-call generation — budget, audit — don't go away just because retrieval is in the loop."
+description: "Build a RAG pipeline with MultiMind, and why budget and audit concerns from single-call generation don't go away once retrieval is in the loop."
 pubDate: 2026-07-14
 tags: ["tech", "python", "rag"]
 ---

@@ -1,6 +1,6 @@
 ---
 import enDict from "../i18n/en";
-import { keywordsFor, siteIdentityGraph } from "../seo";
+import { siteIdentityGraph } from "../seo";
 
 const {
   title,
@@ -10,8 +10,7 @@ const {
   footer = enDict.footer,
   translated = false,
   jsonLd = null,
-  ogImage = "/assets/icon-512.png",
-  keywords = keywordsFor(lang),
+  ogImage = "/assets/og-1200x630.png",
 } = Astro.props;
 
 const path = Astro.url.pathname;
@@ -43,10 +42,10 @@ const jsonLdBlocks = [siteIdentityGraph(), ...(jsonLd ? (Array.isArray(jsonLd) ?
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"></noscript>
 <title>{title}</title>
 <meta name="description" content={description}>
-<meta name="keywords" content={keywords}>
 <link rel="canonical" href={canonical}>
 <link rel="alternate" type="text/plain" href={new URL("/llms.txt", Astro.site).toString()} title="LLM-readable site summary">
 <link rel="alternate" type="text/plain" href={new URL("/llms-full.txt", Astro.site).toString()} title="Full LLM-readable site content">
@@ -74,6 +73,9 @@ const jsonLdBlocks = [siteIdentityGraph(), ...(jsonLd ? (Array.isArray(jsonLd) ?
 <meta property="og:description" content={description}>
 <meta property="og:url" content={canonical}>
 <meta property="og:image" content={new URL(ogImage, Astro.site).toString()}>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MultiMind SDK logo">
 <meta property="og:site_name" content="MultiMind SDK">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content={title}>
@@ -95,7 +97,7 @@ const jsonLdBlocks = [siteIdentityGraph(), ...(jsonLd ? (Array.isArray(jsonLd) ?
 <header class="nav" id="top">
   <div class="nav-inner">
     <a class="brand" href="/">
-      <img src="/assets/logo.png" alt="MultiMind SDK" class="brand-logo">
+      <img src="/assets/logo.png" alt="MultiMind SDK" class="brand-logo" width="899" height="195">
     </a>
     <nav class="nav-links" id="nav-links">
       <a href="/#why">{nav.why}</a>
