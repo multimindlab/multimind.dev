@@ -29,4 +29,4 @@ The honest case for using an existing compliance layer instead of building one i
 
 If your team is scoping this today, the useful exercise isn't "can we build PII redaction" — you can, in a week. It's: who owns keeping the detection accuracy up as new PII patterns show up in production traffic, who owns re-mapping the evidence report when the EU AI Act guidance updates, and whether that ownership is a good use of the team you have. If the answer is "we'd rather that be someone else's job," that's the actual build-vs-buy decision, not the initial code estimate.
 
-Questions about fitting this into an existing stack — reach out at [info@ai2innovate.io](mailto:info@ai2innovate.io) or open a discussion on [GitHub](https://github.com/multimindlab/multimind-sdk).
+Questions about fitting this into an existing stack — reach out at [multimindsdk@gmail.com](mailto:multimindsdk@gmail.com) or open a discussion on [GitHub](https://github.com/multimindlab/multimind-sdk).

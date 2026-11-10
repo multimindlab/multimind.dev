@@ -72,14 +72,14 @@ export function siteIdentityGraph() {
         alternateName: alternateNames,
         url: SITE,
         logo: `${SITE}/assets/icon-512.png`,
-        email: "info@ai2innovate.io",
+        email: "multimindsdk@gmail.com",
         description:
           "multimind-sdk is the compliance-first AI agent framework: one Python API for every LLM, with a PII guard, cost budgets, and GDPR, HIPAA, and EU AI Act evidence reporting.",
         sameAs,
         parentOrganization: {
           "@type": "Organization",
-          name: "AI2Innovate",
-          url: "https://ai2innovate.io",
+          name: "MultimindLab",
+          url: "https://github.com/multimindlab",
         },
       },
       {

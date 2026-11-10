@@ -34,4 +34,4 @@ The direct effect is unblocking deals that get stuck in security review, but the
 
 ## Where to start
 
-The lowest-risk entry point is running the proxy in front of one existing endpoint and validating the audit output against what your compliance or security team would actually need to hand an auditor — not the full platform integration on day one. If you're evaluating this for a hosting or inference platform, the source is at [github.com/multimindlab/multimind-sdk](https://github.com/multimindlab/multimind-sdk), and we're happy to talk through a specific architecture at [info@ai2innovate.io](mailto:info@ai2innovate.io).
+The lowest-risk entry point is running the proxy in front of one existing endpoint and validating the audit output against what your compliance or security team would actually need to hand an auditor — not the full platform integration on day one. If you're evaluating this for a hosting or inference platform, the source is at [github.com/multimindlab/multimind-sdk](https://github.com/multimindlab/multimind-sdk), and we're happy to talk through a specific architecture at [multimindsdk@gmail.com](mailto:multimindsdk@gmail.com).

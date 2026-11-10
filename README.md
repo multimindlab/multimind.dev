@@ -87,4 +87,4 @@ Netlify is connected via git — every push to `main` triggers a build (`npm run
 
 ## License
 
-Apache 2.0. Built by [AI2Innovate](https://ai2innovate.io).
+Apache 2.0. Built by [MultimindLab](https://github.com/multimindlab).

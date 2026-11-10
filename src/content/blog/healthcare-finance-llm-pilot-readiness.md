@@ -47,4 +47,4 @@ Both verticals are really asking the same underlying question in different langu
 
 The pattern that avoids the stall is building the pilot with these controls in place from the start, rather than as a "compliance phase" scoped after the demo lands. A guarded model call and a budgeted proxy are one-line additions to code that already exists — the [case study](/#case-study) on this site walks through both the developer path (wrapping an existing app) and the non-technical path (scanning a document for sensitive data from a terminal, no code required).
 
-If you're scoping a healthcare or finance LLM pilot and want to talk through what evidence your specific compliance review will need, reach out at [info@ai2innovate.io](mailto:info@ai2innovate.io).
+If you're scoping a healthcare or finance LLM pilot and want to talk through what evidence your specific compliance review will need, reach out at [multimindsdk@gmail.com](mailto:multimindsdk@gmail.com).
